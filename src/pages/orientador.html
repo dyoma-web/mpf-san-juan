@@ -1,0 +1,44 @@
+---
+title: Orientador de denuncias
+description: Respondé tres preguntas y te decimos a qué fiscalía ir, qué llevar y qué va a pasar después.
+active: servicios
+quickExit: true
+scripts: orientador.js
+---
+<main id="main">
+<section class="page-hero">
+  <div class="container page-hero-in">
+    <nav class="crumbs" aria-label="Ruta de navegación"><a href="index.html">Inicio</a><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg><a href="servicios.html">Servicios y trámites</a><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg><span aria-current="page">Orientador de denuncias</span></nav>
+    <h1 class="h1">¿Dónde y cómo <span class="serif" style="color:var(--brand-600)">denuncio?</span></h1>
+    <p class="lead">Respondé tres preguntas y te decimos a qué fiscalía ir, qué llevar y qué va a pasar después.</p>
+  </div>
+</section>
+
+<section class="section-sm">
+  <div class="container wizard">
+    <div>
+      <ol class="progress" aria-label="Progreso" data-progress></ol>
+      <div data-wizard aria-live="polite"></div>
+    </div>
+    <aside class="aside-sticky">
+      <div class="card card-tight">
+        <div class="stack-sm">
+          <span class="ico-tile"><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg></span>
+          <h2 class="h4" style="margin-top:6px">Antes de empezar</h2>
+          <p class="small muted">Este orientador no recibe denuncias: te indica dónde y cómo hacerla.</p>
+          <p class="small muted">No te pedimos nombre, documento ni datos del hecho, y no guardamos las opciones que elegís.</p>
+        </div>
+      </div>
+      <div class="card card-tight">
+        <div class="stack-sm">
+          <span class="ico-tile ico-tile-gold"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg></span>
+          <h2 class="h4" style="margin-top:6px">¿Preferís hablar con una persona?</h2>
+          <p class="small muted">Atención al público: <span class="ph">[teléfono]</span>, de lunes a viernes, <span class="ph">[horario]</span>.</p>
+          <a href="contacto.html" class="link-arrow small">Otros canales de contacto<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+      <p class="xsmall muted" style="padding:0 4px">Contenido a cargo de <span class="ph">[área responsable]</span>. Revisado el <span class="ph">[fecha]</span>.</p>
+    </aside>
+  </div>
+</section>
+</main>

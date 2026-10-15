@@ -1,0 +1,6 @@
+dist/
+node_modules/
+# Export original de Claude Design (referencia local, no se publica)
+Prototipo sitio web MPF San Juan.html
+.DS_Store
+Thumbs.db

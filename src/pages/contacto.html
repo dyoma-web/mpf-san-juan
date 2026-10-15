@@ -1,0 +1,45 @@
+---
+title: Contacto
+description: Canales de atención del Ministerio Público Fiscal de San Juan y formulario de consultas.
+active: contacto
+scripts: contacto.js
+---
+<main id="main">
+<section class="page-hero">
+  <div class="container page-hero-in">
+    <nav class="crumbs" aria-label="Ruta de navegación"><a href="index.html">Inicio</a><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg><span aria-current="page">Contacto</span></nav>
+    <h1 class="h1">Contacto</h1>
+    <p class="lead">Elegí el canal que te quede más cómodo. Para emergencias, llamá siempre al <a href="tel:911"><strong>911</strong></a>.</p>
+  </div>
+</section>
+
+<section class="section-sm">
+  <div class="container grid grid-3">
+    <div class="card"><span class="ico-tile"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg></span><h2 class="h4" style="margin-top:14px">Por teléfono</h2><p class="small muted">Atención al público: <span class="ph">[número]</span><br>Lunes a viernes, <span class="ph">[horario]</span></p></div>
+    <div class="card"><span class="ico-tile"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg></span><h2 class="h4" style="margin-top:14px">En persona</h2><p class="small muted">Mesa de entradas: <span class="ph">[Dirección]</span>, Ciudad de San Juan</p><a class="link-arrow small" style="margin-top:10px" href="fiscalias.html">Ver todas las sedes<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+    <div class="card"><span class="ico-tile"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg></span><h2 class="h4" style="margin-top:14px">Por correo</h2><p class="small muted"><span class="ph">[casilla institucional]</span></p></div>
+  </div>
+</section>
+
+<section class="section-sm">
+  <div class="container split">
+    <form class="card stack-lg" style="padding:clamp(24px,3vw,40px)" data-contact novalidate>
+      <div class="stack-sm"><h2 class="h2">Escribinos</h2><p class="muted small">Respondemos en <span class="ph">[plazo]</span> días hábiles.</p></div>
+      <div class="callout"><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg><p class="small">Este formulario <strong>no recibe denuncias</strong>. Para denunciar, usá el <a href="orientador.html">orientador de denuncias</a>.</p></div>
+      <div class="form-grid">
+        <div><label class="label" for="c-nombre">Nombre y apellido</label><input id="c-nombre" class="input" autocomplete="name" required><p class="field-error" hidden></p></div>
+        <div><label class="label" for="c-mail">Correo electrónico</label><input id="c-mail" class="input" type="email" autocomplete="email" required><p class="field-error" hidden></p></div>
+        <div class="full"><label class="label" for="c-motivo">Motivo</label><select id="c-motivo" class="select"><option value="consulta">Consulta general</option><option value="informacion">Acceso a la información pública</option><option value="sugerencia">Sugerencia o reclamo</option><option value="prensa">Prensa</option><option value="trabajo">Trabajar en el MPF</option></select></div>
+        <div class="full"><label class="label" for="c-msg">Mensaje</label><textarea id="c-msg" class="input" rows="5" required></textarea><p class="hint">No incluyas datos sensibles de una causa.</p><p class="field-error" hidden></p></div>
+      </div>
+      <div><button type="submit" class="btn btn-primary btn-lg">Enviar consulta<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
+    </form>
+    <div class="stack-lg">
+      <div class="card stack-sm" id="trabajar"><h2 class="h3">Trabajar en el MPF</h2><p class="small muted">Concursos, búsquedas abiertas y pasantías. <span class="ph">[Enlace a convocatorias]</span></p></div>
+      <div class="card stack-sm" id="accesibilidad"><h2 class="h3">Declaración de accesibilidad</h2><p class="small muted">Este sitio busca cumplir las pautas WCAG 2.2 nivel AA: textos ampliables, alto contraste, navegación con teclado y lectura fácil. Si encontrás una barrera, contanos con este formulario.</p></div>
+      <div class="card stack-sm" id="privacidad"><h2 class="h3">Política de privacidad</h2><p class="small muted">El sitio no usa cookies de seguimiento. El orientador de denuncias no guarda las opciones que elegís. <span class="ph">[Texto legal a validar]</span></p></div>
+      <div class="card stack-sm" id="terminos"><h2 class="h3">Términos de uso</h2><p class="small muted">Los contenidos tienen licencia abierta salvo indicación en contrario. <span class="ph">[Texto legal a validar]</span></p></div>
+    </div>
+  </div>
+</section>
+</main>

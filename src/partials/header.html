@@ -1,0 +1,89 @@
+<div class="topbar" role="region" aria-label="Ayuda urgente y accesibilidad">
+  <div class="container topbar-in">
+    <div class="topbar-help">
+      <a class="topbar-911" href="tel:911"><span class="pulse" aria-hidden="true"></span>¿Estás en peligro? Llamá al <strong>911</strong></a>
+      <a class="topbar-line" href="tel:144">Violencia de género <strong>144</strong></a>
+      <a class="topbar-line" href="tel:102">Niñez y adolescencia <strong>102</strong></a>
+      <a class="topbar-more" href="victimas.html#lineas">Más líneas de ayuda</a>
+    </div>
+    <div class="topbar-tools">
+      <button type="button" class="tool" data-a11y="smaller" aria-label="Disminuir el tamaño del texto">A−</button>
+      <button type="button" class="tool" data-a11y="bigger" aria-label="Aumentar el tamaño del texto">A+</button>
+      <button type="button" class="tool" data-a11y="contrast" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-contrast"/></svg><span>Alto contraste</span></button>
+      <button type="button" class="tool" data-a11y="easy" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-easy"/></svg><span>Lectura fácil</span></button>
+      <a class="quick-exit{{quickExit}}" href="https://www.google.com.ar" data-quick-exit title="También podés presionar Esc tres veces"><svg class="ic" aria-hidden="true"><use href="#i-exit"/></svg>Salida rápida</a>
+    </div>
+  </div>
+</div>
+
+<header class="site-header" data-header>
+  <div class="container header-in">
+    <a class="brand" href="index.html" aria-label="Ministerio Público Fiscal de San Juan, ir al inicio">
+      <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="bm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1F4C7A"/><stop offset="1" stop-color="#0B1A2A"/></linearGradient></defs>
+        <rect width="48" height="48" rx="13" fill="url(#bm)"/>
+        <path d="M14 20.5a10 10 0 0 1 20 0" fill="none" stroke="#D4B26F" stroke-width="2.6" stroke-linecap="round"/>
+        <path d="M11.5 22.5h25" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M16 26v8.5M22 26v8.5M26 26v8.5M32 26v8.5" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>
+        <path d="M12 37.5h24" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-text">
+        <span class="brand-name">Ministerio Público Fiscal</span>
+        <span class="brand-sub">Provincia de San Juan</span>
+      </span>
+    </a>
+
+    <div class="header-actions">
+      <button type="button" class="search-trigger" data-open-search aria-label="Buscar en el sitio">
+        <svg class="ic" aria-hidden="true"><use href="#i-search"/></svg>
+        <span class="search-trigger-t">¿Qué necesitás hacer?</span>
+        <kbd class="kbd" aria-hidden="true">Ctrl K</kbd>
+      </button>
+      <a class="btn btn-primary btn-cta" href="orientador.html">Cómo denunciar<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <button type="button" class="menu-btn" data-open-menu aria-expanded="false" aria-controls="drawer" aria-label="Abrir el menú">
+        <svg class="ic" aria-hidden="true"><use href="#i-menu"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="main-nav" aria-label="Navegación principal">
+    <div class="container">
+      <ul class="nav-list">
+{{nav}}
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<div class="drawer" id="drawer" hidden>
+  <div class="drawer-scrim" data-close-menu></div>
+  <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Menú">
+    <div class="drawer-head">
+      <span class="drawer-title">Menú</span>
+      <button type="button" class="icon-btn" data-close-menu aria-label="Cerrar el menú"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button>
+    </div>
+    <button type="button" class="drawer-search" data-open-search><svg class="ic" aria-hidden="true"><use href="#i-search"/></svg>Buscar en el sitio</button>
+    <ul class="drawer-list">
+      <li><a class="drawer-link" href="index.html">Inicio</a></li>
+{{navMobile}}
+    </ul>
+    <a class="btn btn-primary btn-block" href="orientador.html">Cómo denunciar</a>
+    <div class="drawer-lines">
+      <a href="tel:911"><strong>911</strong> Emergencias</a>
+      <a href="tel:144"><strong>144</strong> Violencia de género</a>
+      <a href="tel:102"><strong>102</strong> Niñez y adolescencia</a>
+    </div>
+  </div>
+</div>
+
+<div class="cmdk" id="cmdk" hidden>
+  <div class="cmdk-scrim" data-close-search></div>
+  <div class="cmdk-panel" role="dialog" aria-modal="true" aria-label="Buscar en el sitio">
+    <div class="cmdk-input-row">
+      <svg class="ic" aria-hidden="true"><use href="#i-search"/></svg>
+      <input class="cmdk-input" id="cmdk-input" type="search" autocomplete="off" placeholder="Buscá un trámite, un delito o una sede…" aria-label="Buscar" aria-controls="cmdk-list" aria-autocomplete="list">
+      <kbd class="kbd">Esc</kbd>
+    </div>
+    <ul class="cmdk-list" id="cmdk-list" role="listbox" aria-label="Resultados"></ul>
+    <div class="cmdk-foot"><span><kbd class="kbd">↑</kbd><kbd class="kbd">↓</kbd> para moverte</span><span><kbd class="kbd">Enter</kbd> para abrir</span></div>
+  </div>
+</div>

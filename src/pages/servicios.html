@@ -1,0 +1,120 @@
+---
+title: Servicios y trámites
+description: Todo lo que podés hacer ante el Ministerio Público Fiscal, explicado paso a paso.
+active: servicios
+scripts: servicios.js
+---
+<main id="main">
+<section class="page-hero">
+  <div class="container page-hero-in">
+    <nav class="crumbs" aria-label="Ruta de navegación"><a href="index.html">Inicio</a><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg><span aria-current="page">Servicios y trámites</span></nav>
+    <h1 class="h1">Servicios y trámites</h1>
+    <p class="lead">Todo lo que podés hacer ante el Ministerio Público Fiscal, explicado paso a paso: qué necesitás, cuánto demora y a quién preguntar.</p>
+  </div>
+</section>
+
+<div class="container with-toc" style="padding-block:40px 88px">
+  <nav class="toc" aria-label="En esta página" data-toc>
+    <span class="toc-t">En esta página</span>
+    <a href="#denunciar">Hacer una denuncia</a>
+    <a href="#seguimiento">Seguir tu denuncia</a>
+    <a href="#objetos">Recuperar objetos</a>
+    <a href="#constancias">Constancias y copias</a>
+    <a href="#testigos">Si te citan como testigo</a>
+    <a href="#alternativas">Acuerdos y salidas alternativas</a>
+    <a href="#profesionales">Para abogadas y abogados</a>
+    <a href="#preguntas">Preguntas frecuentes</a>
+  </nav>
+
+  <div>
+    <section id="denunciar" class="blk">
+      <h2 class="h2">Hacer una denuncia</h2>
+      <p>Cualquier persona puede denunciar un delito, aunque no sea la víctima. No necesitás abogada ni abogado, y no tiene costo.</p>
+      <div class="grid grid-3">
+        <div class="card"><span class="ico-tile"><svg class="ic" aria-hidden="true"><use href="#i-building"/></svg></span><h3 class="h4" style="margin-top:14px">En una sede del MPF</h3><p class="small muted">En la mesa de entradas de la sede central o en la sede de tu zona. <span class="ph">[Horarios]</span></p><a class="link-arrow small" style="margin-top:10px" href="fiscalias.html">Ver sedes<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+        <div class="card"><span class="ico-tile"><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg></span><h3 class="h4" style="margin-top:14px">En una comisaría</h3><p class="small muted">Todas las comisarías reciben denuncias las 24 horas y las envían a la fiscalía que corresponde.</p></div>
+        <div class="card" style="background:var(--gold-50);border-color:#EEDDB8"><span class="tag tag-gold">Propuesta a definir</span><h3 class="h4" style="margin-top:14px">En línea</h3><p class="small muted">Formulario guiado para hechos sin urgencia, como estafas o hurtos sin violencia, con constancia por correo electrónico.</p></div>
+      </div>
+      <div class="card grid grid-2" style="gap:28px">
+        <div><h3 class="h4">Qué conviene llevar</h3><ul class="checklist small" style="margin-top:14px"><li>Tu DNI.</li><li>Todo lo que ayude a reconstruir el hecho: fecha, hora, lugar, descripción de las personas.</li><li>Pruebas que tengas: mensajes, fotos, comprobantes, certificados médicos.</li><li>Datos de testigos, si los hay.</li></ul></div>
+        <div><h3 class="h4">Tus derechos al denunciar</h3><ul class="checklist small" style="margin-top:14px"><li>Recibir una constancia con número de legajo.</li><li>Declarar en un espacio con privacidad.</li><li>Pedir reserva de tu identidad si temés por tu seguridad. <span class="ph">[Validar alcance]</span></li><li>Ser informada o informado sobre el avance del caso.</li></ul></div>
+      </div>
+      <div class="btn-row"><a class="btn btn-primary" href="orientador.html">Usar el orientador de denuncias<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn-secondary" href="victimas.html#derechos">Ver los derechos de las víctimas</a></div>
+    </section>
+
+    <section id="seguimiento" class="blk">
+      <h2 class="h2">Seguir tu denuncia</h2>
+      <p>Con el número de legajo que figura en tu constancia podés ver en qué etapa está tu caso. Los detalles de la investigación se informan en la UFI, para proteger a las personas involucradas.</p>
+      <form class="card" style="max-width:760px" data-legajo novalidate>
+        <div class="form-grid">
+          <div><label class="label" for="legajo">Número de legajo</label><input id="legajo" class="input" placeholder="Ejemplo: 12345/2026" autocomplete="off" required><p class="field-error" hidden></p></div>
+          <div><label class="label" for="dni-seg">DNI de quien denunció</label><input id="dni-seg" class="input" inputmode="numeric" autocomplete="off" required><p class="field-error" hidden></p></div>
+        </div>
+        <div style="margin-top:18px"><button type="submit" class="btn btn-primary">Consultar estado</button></div>
+        <p class="hint">La consulta muestra solamente la etapa y la UFI a cargo. <span class="ph">[Definir si se usa legajo y DNI o inicio de sesión con Mi Argentina u otra cuenta provincial]</span></p>
+        <div class="status-result" data-legajo-result hidden aria-live="polite"></div>
+      </form>
+      <h3 class="h3">Qué significa cada estado</h3>
+      <ul class="status-list">
+        <li><strong><span class="dot" style="background:#8A99A8"></span>Recibida</strong>La denuncia ingresó y se está asignando a una UFI.</li>
+        <li><strong><span class="dot" style="background:var(--brand-500)"></span>En investigación</strong>La UFI reúne pruebas. Pueden citarte.</li>
+        <li><strong><span class="dot" style="background:var(--gold)"></span>Audiencia fijada</strong>Hay una audiencia ante una jueza o un juez; te informamos fecha y lugar.</li>
+        <li><strong><span class="dot" style="background:var(--ok)"></span>Resuelta</strong>El caso terminó con un acuerdo, una sentencia u otra decisión judicial.</li>
+        <li><strong><span class="dot" style="background:#B9C2CC"></span>Archivada</strong>No se pudo avanzar. Si sos la víctima, podés pedir que se revise esa decisión.</li>
+      </ul>
+    </section>
+
+    <section id="objetos" class="blk">
+      <h2 class="h2">Recuperar objetos secuestrados</h2>
+      <p>Cuando la Policía o la fiscalía recuperan algo que te robaron, como un teléfono o una cartera, queda resguardado como prueba hasta que la UFI autoriza la devolución.</p>
+      <ol class="steps card">
+        <li><span class="num">1</span><div><strong>Acreditá que es tuyo</strong><span class="small muted">Factura, caja con el IMEI, fotos o cualquier documento que lo demuestre.</span></div></li>
+        <li><span class="num">2</span><div><strong>Pedí la devolución en la UFI a cargo</strong><span class="small muted">Con tu DNI y el número de legajo. <span class="ph">[Formulario descargable o en línea]</span></span></div></li>
+        <li><span class="num">3</span><div><strong>Retiralo en la fecha que te indiquen</strong><span class="small muted">Algunos objetos se devuelven en guarda: tenés que conservarlos sin modificarlos hasta que termine el caso.</span></div></li>
+      </ol>
+    </section>
+
+    <section id="constancias" class="blk">
+      <h2 class="h2">Constancias y copias</h2>
+      <div class="grid grid-2">
+        <div class="card"><span class="ico-tile"><svg class="ic" aria-hidden="true"><use href="#i-file"/></svg></span><h3 class="h4" style="margin-top:14px">Copia de la constancia de denuncia</h3><p class="small muted">Para presentar en tu trabajo, en una aseguradora o para bloquear un celular. Quien denunció la pide en la sede donde hizo la denuncia.</p></div>
+        <div class="card"><span class="ico-tile"><svg class="ic" aria-hidden="true"><use href="#i-book"/></svg></span><h3 class="h4" style="margin-top:14px">Copia de actuaciones</h3><p class="small muted">Solo para las partes del proceso y sus abogadas o abogados, en la UFI a cargo. <span class="ph">[Requisitos]</span></p></div>
+      </div>
+    </section>
+
+    <section id="testigos" class="blk">
+      <h2 class="h2">Si te citan como testigo</h2>
+      <p>Declarar como testigo es una obligación y también una ayuda clave para la investigación. Tenés derecho a que te expliquen para qué te citan y a pedir una constancia para tu trabajo.</p>
+      <ul class="checklist"><li>Llevá tu DNI y la citación.</li><li>Si no podés asistir, avisá a la UFI antes de la fecha.</li><li>Si tenés miedo de declarar, decilo: existen medidas para protegerte.</li></ul>
+    </section>
+
+    <section id="alternativas" class="blk">
+      <h2 class="h2">Acuerdos y salidas alternativas</h2>
+      <p>No todos los casos terminan en un juicio oral. La ley prevé otras formas de resolverlos, y la víctima tiene derecho a ser escuchada antes de que se acuerden. <span class="ph">[Validar denominaciones con el Código Procesal Penal de San Juan]</span></p>
+      <div class="grid grid-3">
+        <div class="card"><h3 class="h4">Juicio abreviado</h3><p class="small muted">La persona acusada reconoce el hecho y acepta una pena, que una jueza o un juez controla y dicta.</p></div>
+        <div class="card"><h3 class="h4">Conciliación o reparación</h3><p class="small muted">En algunos delitos, la víctima y la persona acusada pueden llegar a un acuerdo que repare el daño.</p></div>
+        <div class="card"><h3 class="h4">Suspensión del juicio a prueba</h3><p class="small muted">La persona acusada cumple reglas de conducta durante un tiempo; si las cumple, el caso se cierra.</p></div>
+      </div>
+    </section>
+
+    <section id="profesionales" class="blk">
+      <h2 class="h2">Para abogadas y abogados</h2>
+      <p>Las presentaciones en causas y el expediente electrónico se gestionan en los sistemas del Poder Judicial. Desde acá podés consultar la normativa del MPF y el directorio de cada UFI.</p>
+      <div class="btn-row"><a class="btn btn-secondary" href="documentos.html">Instrucciones generales y resoluciones</a><a class="btn btn-secondary" href="fiscalias.html">Directorio de UFI</a><a class="btn btn-secondary" href="https://www.jussanjuan.gov.ar/" rel="noopener">Sistemas del Poder Judicial<svg class="ic" aria-hidden="true"><use href="#i-external"/></svg></a></div>
+    </section>
+
+    <section id="preguntas" class="blk">
+      <h2 class="h2">Preguntas frecuentes</h2>
+      <div class="faq">
+        <details open><summary>¿Tengo que ir con abogada o abogado para denunciar?<svg class="ic" aria-hidden="true"><use href="#i-chev-down"/></svg></summary><p>No. Podés denunciar por tu cuenta. Si querés participar como parte en el proceso, como querellante, ahí sí necesitás patrocinio.</p></details>
+        <details><summary>¿Puedo denunciar algo que le pasó a otra persona?<svg class="ic" aria-hidden="true"><use href="#i-chev-down"/></svg></summary><p>Sí. Cualquier persona que conozca un delito puede denunciarlo. En delitos que dependen de la decisión de la víctima, la fiscalía te explicará cómo seguir.</p></details>
+        <details><summary>¿Puedo retirar una denuncia?<svg class="ic" aria-hidden="true"><use href="#i-chev-down"/></svg></summary><p>En la mayoría de los delitos la investigación sigue aunque quien denunció cambie de opinión. Consultá en la UFI a cargo cómo aplica a tu caso.</p></details>
+        <details><summary>¿Cuánto tarda una investigación?<svg class="ic" aria-hidden="true"><use href="#i-chev-down"/></svg></summary><p>Depende del delito y de las pruebas. Los casos de flagrancia pueden resolverse en horas o días; otros requieren meses. <span class="ph">[Publicar tiempos promedio por tipo de caso]</span></p></details>
+        <details><summary>¿Qué hago si perdí mi constancia?<svg class="ic" aria-hidden="true"><use href="#i-chev-down"/></svg></summary><p>Pedí una copia en la sede donde denunciaste, con tu DNI.</p></details>
+        <details><summary>¿El MPF me puede dar asesoramiento legal sobre mi caso?<svg class="ic" aria-hidden="true"><use href="#i-chev-down"/></svg></summary><p>El MPF representa el interés de la sociedad en la investigación. Para asesoramiento sobre tu situación personal podés consultar a la Defensa Pública o a una abogada o un abogado particular.</p></details>
+      </div>
+    </section>
+  </div>
+</div>
+</main>

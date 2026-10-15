@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{title}}</title>
+<meta name="description" content="{{description}}">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0B1A2A">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{description}}">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<script>
+  // Preferencias de accesibilidad antes del primer pintado para evitar parpadeos.
+  (function () {
+    try {
+      var d = document.documentElement, p = JSON.parse(localStorage.getItem('mpf-a11y') || '{}');
+      if (p.scale) d.style.setProperty('--scale', p.scale);
+      if (p.contrast) d.dataset.contrast = 'high';
+      if (p.easy) d.dataset.easy = 'on';
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body class="{{bodyClass}}" data-page="{{page}}">
+{{icons}}
+<a class="skip" href="#main">Saltar al contenido</a>
+{{header}}
+{{main}}
+{{footer}}
+<script src="assets/js/app.js" defer></script>
+{{scripts}}
+</body>
+</html>

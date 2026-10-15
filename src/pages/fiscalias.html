@@ -1,0 +1,57 @@
+---
+title: Fiscalías y sedes
+description: Elegí un departamento para ver qué sedes del MPF te atienden, sus horarios y cómo llegar.
+active: fiscalias
+scripts: fiscalias.js
+---
+<main id="main">
+<section class="page-hero">
+  <div class="container page-hero-in">
+    <nav class="crumbs" aria-label="Ruta de navegación"><a href="index.html">Inicio</a><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg><span aria-current="page">Fiscalías y sedes</span></nav>
+    <h1 class="h1">Fiscalías y sedes</h1>
+    <p class="lead">Elegí un departamento en el mapa para ver qué sedes te atienden, sus horarios y cómo llegar.</p>
+    <div class="toolbar" style="max-width:920px;margin-top:8px">
+      <div class="grow"><label class="label" for="q-sedes">Buscar por nombre, localidad o tema</label><input id="q-sedes" class="input" type="search" placeholder="Por ejemplo: flagrancia, Caucete, víctimas" autocomplete="off"></div>
+      <button type="button" class="btn btn-secondary" data-csv><svg class="ic" aria-hidden="true"><use href="#i-download"/></svg>Descargar directorio (CSV)</button>
+    </div>
+  </div>
+</section>
+
+<section class="section-sm">
+  <div class="container map-layout">
+    <section class="map-panel" aria-label="Mapa de departamentos">
+      <h2 class="h4">Departamentos de San Juan</h2>
+      <p class="xsmall muted" style="margin-top:4px">Mapa esquemático: cada cuadro es un departamento ubicado según su posición aproximada.</p>
+      <div class="tile-map" data-tiles></div>
+      <div class="legend">
+        <span><i style="background:var(--ink)"></i>Departamento elegido</span>
+        <span><i style="background:var(--brand-50);border:1.5px solid #A9C8E6"></i>Misma zona de atención</span>
+      </div>
+    </section>
+
+    <section aria-live="polite" class="stack">
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px">
+        <h2 class="h2" data-title>Te atienden en Capital</h2>
+        <span class="tag tag-gold">Datos de ejemplo</span>
+      </div>
+      <div class="hero-chips" role="group" aria-label="Filtrar por tipo" data-types></div>
+      <p class="count" data-count></p>
+      <ul class="stack" style="list-style:none;padding:0" data-sedes></ul>
+    </section>
+  </div>
+</section>
+
+<section class="section bg-white border-y">
+  <div class="container">
+    <div class="section-head"><div class="section-head-text"><span class="eyebrow">Red de ayuda</span><h2 class="h2">Otras instituciones que pueden ayudarte</h2><p>Si tu consulta no le corresponde al Ministerio Público Fiscal, estos organismos pueden atenderte.</p></div></div>
+    <ul class="grid grid-3" style="list-style:none;padding:0">
+      <li class="card"><h3 class="h4">Ministerio Público de la Defensa</h3><p class="small muted">Defensa gratuita si te acusan de un delito y no podés pagar una abogada o un abogado.</p><a class="link-arrow small" style="margin-top:12px" href="https://www.jussanjuan.gov.ar/mpd/organigrama/" rel="noopener">Ver sitio<svg class="ic" aria-hidden="true"><use href="#i-external"/></svg></a></li>
+      <li class="card"><h3 class="h4">Poder Judicial de San Juan</h3><p class="small muted">Juzgados, audiencias, expedientes y trámites judiciales.</p><a class="link-arrow small" style="margin-top:12px" href="https://www.jussanjuan.gov.ar/" rel="noopener">Ver sitio<svg class="ic" aria-hidden="true"><use href="#i-external"/></svg></a></li>
+      <li class="card"><h3 class="h4">Policía de San Juan</h3><p class="small muted">Emergencias al 911 y denuncias en comisarías, las 24 horas.</p></li>
+      <li class="card"><h3 class="h4">Defensoría del Pueblo</h3><p class="small muted">Reclamos contra organismos públicos y protección de derechos. <span class="ph">[Datos provinciales]</span></p></li>
+      <li class="card"><h3 class="h4">Área provincial de niñez y familia</h3><p class="small muted">Protección de derechos de niñas, niños y adolescentes. <span class="ph">[Denominación y contacto]</span></p></li>
+      <li class="card"><h3 class="h4">Centros de Acceso a Justicia</h3><p class="small muted">Orientación jurídica gratuita y trámites, en distintos puntos de la provincia. <span class="ph">[Validar sedes]</span></p></li>
+    </ul>
+  </div>
+</section>
+</main>
