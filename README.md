@@ -17,6 +17,23 @@ Prototipo funcional del nuevo sitio del **Ministerio Público Fiscal de la Provi
 
 **Transversal:** buscador global tipo paleta de comandos (`Ctrl/⌘ + K` o `/`), barra de ayuda urgente, tamaño de texto, alto contraste y lectura fácil (persisten entre páginas), salida rápida (botón o `Esc` tres veces en Víctimas), menú móvil, valoración de cada página, estilos de impresión y respeto por `prefers-reduced-motion`.
 
+## Modo revisión (comentarios en vivo)
+
+Pensado para sesiones de trabajo con el cliente sobre el prototipo. Se activa abriendo cualquier página con `?revision=CÓDIGO` (o `?revision` para escribir el código). Sin eso, el público no ve nada.
+
+| Herramienta | Atajo | Qué hace |
+|---|---|---|
+| Comentar | `C` | Clic en cualquier elemento: deja un post-it anclado (Corregir, Agregar, Eliminar, Idea, Pregunta) |
+| Redacción | `S` | Seleccioná un texto y proponé cómo debería decir; se muestra como tachado → nuevo |
+| Ocultar | `H` | Oculta un bloque solo en tu pantalla para simular “¿y si lo quitamos?”, con opción de proponer su eliminación |
+| Panel | `P` | Lista con filtros, búsqueda, orden por votos, estados, respuestas en hilo, votos y “ir al elemento” |
+
+Además: presencia en vivo (quién está y en qué página), avisos cuando otra persona comenta, versión del sitio registrada en cada comentario, **acta de la sesión** en Markdown y exportación CSV. Los comentarios también aparecen en una hoja de Google Sheets vía `IMPORTDATA`.
+
+**Arquitectura:** Supabase. Las tablas tienen RLS sin políticas (cerradas) y todo pasa por funciones `SECURITY DEFINER` que validan el código de sesión (`supabase/schema.sql`). Los avisos instantáneos y la presencia usan Supabase Realtime; si se corta, hay sondeo cada 20 s. La función `review-csv` exporta los comentarios para la hoja de cálculo. La clave del cliente que está en el HTML es pública por diseño.
+
+**Cambiar el código de sesión:** `update public.review_config set value = 'NUEVO' where key = 'session_code';`
+
 ## Estructura
 
 ```

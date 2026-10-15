@@ -57,6 +57,7 @@
   let escCount = 0, escTimer;
   document.addEventListener('keydown', (e) => {
     if (e.key !== 'Escape' || document.body.dataset.page !== 'victimas') return;
+    if (document.body.classList.contains('rv-active')) return; // en modo revisión, Esc cierra herramientas
     if ($('#cmdk:not([hidden])') || $('#drawer:not([hidden])')) return;
     escCount++;
     clearTimeout(escTimer);

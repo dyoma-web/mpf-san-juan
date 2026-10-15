@@ -7,6 +7,7 @@
 <meta name="description" content="{{description}}">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#0B1A2A">
+<meta name="mpf-version" content="{{version}}">
 <meta property="og:title" content="{{title}}">
 <meta property="og:description" content="{{description}}">
 <meta property="og:type" content="website">
@@ -33,7 +34,17 @@
 {{header}}
 {{main}}
 {{footer}}
+<script>
+  // Modo revisión (comentarios en vivo). Clave pública: el acceso real lo controla el código de sesión.
+  window.MPF_REVIEW = {
+    url: 'https://ltdalwjcsfkjlmuxhlcy.supabase.co',
+    key: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx0ZGFsd2pjc2ZramxtdXhobGN5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTIwNzIwMzIsImV4cCI6MjEwNzY0ODAzMn0.yJmrCJyB361EsYVmhYfO0u8m7e_Vuk79TVHvesQKS94',
+    csv: 'https://ltdalwjcsfkjlmuxhlcy.supabase.co/functions/v1/review-csv',
+    sheet: 'https://docs.google.com/spreadsheets/d/1s4qIruns6kY59LPLiI-wsbBiNmX3FgnP3q9rUJFjanc/edit'
+  };
+</script>
 <script src="assets/js/app.js" defer></script>
+<script src="assets/js/review.js" defer></script>
 {{scripts}}
 </body>
 </html>

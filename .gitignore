@@ -4,3 +4,6 @@ node_modules/
 Prototipo sitio web MPF San Juan.html
 .DS_Store
 Thumbs.db
+
+# SQL con el codigo de sesion real (no se publica)
+supabase/*.local.sql

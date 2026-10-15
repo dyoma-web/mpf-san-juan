@@ -3,6 +3,7 @@
 // con el encabezado y el pie compartidos, y escribe el sitio en dist/.
 import { readFileSync, writeFileSync, readdirSync, mkdirSync, rmSync, cpSync, existsSync } from 'node:fs';
 import { join, basename } from 'node:path';
+import { execSync } from 'node:child_process';
 
 const ROOT = new URL('.', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1');
 const SRC = join(ROOT, 'src');
@@ -49,6 +50,13 @@ function navHtml(active, cls) {
   }).join('\n');
 }
 
+// Versión publicada: commit corto + fecha, para saber sobre qué versión se hizo cada comentario.
+let version = new Date().toISOString().slice(0, 10);
+try {
+  const sha = execSync('git rev-parse --short HEAD', { cwd: ROOT, stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim();
+  if (sha) version = `${sha} · ${version}`;
+} catch (e) { /* sin git */ }
+
 rmSync(OUT, { recursive: true, force: true });
 mkdirSync(OUT, { recursive: true });
 cpSync(join(ROOT, 'assets'), join(OUT, 'assets'), { recursive: true });
@@ -70,6 +78,7 @@ for (const f of pages) {
     description: meta.description || '',
     bodyClass: meta.bodyClass || '',
     page: basename(f, '.html'),
+    version,
     icons,
     header: h,
     footer,
