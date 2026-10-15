@@ -1,59 +1,175 @@
 ---
 title: Escuela del MPF
-description: Formación virtual para operadores del sistema penal, para la ciudadanía y para escuelas y familias.
+description: Formación para investigar mejor y para entender la justicia: trayectos por público, casoteca, biblioteca, calendario y certificados verificables.
 active: escuela
 scripts: escuela.js
 ---
 <main id="main">
-<section class="section bg-night school on-dark" style="padding-block:56px 88px">
+<section class="section bg-night school on-dark" style="padding-block:48px 80px">
   <div class="container stack-lg">
     <nav class="crumbs" aria-label="Ruta de navegación" style="color:#8396A9"><a href="index.html" style="color:#A9B8C7">Inicio</a><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg><span aria-current="page">Escuela</span></nav>
     <span class="eyebrow">Escuela del Ministerio Público Fiscal</span>
-    <h1 class="display" style="color:#fff;max-width:16ch">Aprender cómo funciona <span class="serif" style="color:var(--gold)">la justicia penal.</span></h1>
-    <p class="lead" style="color:#A9B8C7">Formación virtual para quienes investigan, para quienes colaboran en cada investigación y para cualquier persona que quiera entender el proceso.</p>
-    <div class="btn-row"><a class="btn btn-gold" href="#ofertas">Ver cursos<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn-outline-light" href="#campus">Ingresar al campus</a></div>
+    <h1 class="display" style="color:#fff;max-width:18ch">Formación para investigar mejor y para <span class="serif" style="color:var(--gold)">entender la justicia.</span></h1>
+    <p class="lead" style="color:#A9B8C7">El campus virtual del Ministerio Público Fiscal reúne cursos para quienes investigan, para quienes colaboran en cada investigación y para cualquier persona que quiera conocer sus derechos.</p>
+    <form class="hero-search" role="search" data-course-search style="max-width:620px">
+      <svg class="ic" aria-hidden="true"><use href="#i-search"/></svg>
+      <label for="q-curso" class="sr-only">Buscar un curso</label>
+      <input id="q-curso" type="search" placeholder="Buscar un curso: flagrancia, grooming, Ley Micaela…" autocomplete="off">
+      <button type="submit" class="btn btn-primary">Buscar</button>
+    </form>
   </div>
 </section>
 
-<section class="section" id="ofertas">
+<nav class="subnav" aria-label="Secciones de la Escuela" data-subnav>
+  <div class="container"><ul>
+    <li><a href="#oferta">Oferta por público</a></li>
+    <li><a href="#obligatoria">Formación obligatoria</a></li>
+    <li><a href="#como">Cómo funciona</a></li>
+    <li><a href="#casoteca">Casoteca</a></li>
+    <li><a href="#biblioteca">Biblioteca</a></li>
+    <li><a href="#calendario">Calendario</a></li>
+    <li><a href="#certificados">Verificar certificados</a></li>
+    <li><a class="subnav-cta" href="campus.html">Ingresar a Mi campus →</a></li>
+  </ul></div>
+</nav>
+
+<section class="section-sm">
   <div class="container">
-    <div class="section-head">
-      <div class="section-head-text"><span class="eyebrow">Oferta formativa</span><h2 class="h2">Cursos</h2></div>
-      <div class="hero-chips" role="group" aria-label="Filtrar por público" data-course-filter>
-        <button type="button" class="chip" aria-pressed="true" data-p="">Todos</button>
-        <button type="button" class="chip" aria-pressed="false" data-p="ciudadania">Ciudadanía</button>
-        <button type="button" class="chip" aria-pressed="false" data-p="operadores">Operadores</button>
-        <button type="button" class="chip" aria-pressed="false" data-p="escuelas">Escuelas y familias</button>
-      </div>
+    <div class="section-head"><div class="section-head-text"><span class="eyebrow">Próximos inicios</span><h2 class="h2">Empiezan pronto</h2></div><a class="link-arrow" href="#calendario">Ver el calendario completo<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+    <div class="grid grid-3">
+      <a class="card card-link" href="curso-flagrancia.html"><span class="tag" style="align-self:flex-start">Tutorado</span><h3 class="h4">Investigar rápido, investigar bien: el procedimiento de flagrancia</h3><p class="small muted">Inicio: <span class="ph">[fecha]</span></p><span class="card-go"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a>
+      <a class="card card-link" href="#oferta" data-pub-link="mpf"><span class="tag" style="align-self:flex-start">Tutorado</span><h3 class="h4">Evidencia digital y cooperación con plataformas</h3><p class="small muted">Inicio: <span class="ph">[fecha]</span></p><span class="card-go"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a>
+      <a class="card card-link" href="#oferta" data-pub-link="edu"><span class="tag tag-ok" style="align-self:flex-start">Abierto, a tu ritmo</span><h3 class="h4">Prevención del grooming para docentes y familias</h3><p class="small muted">Disponible todo el año</p><span class="card-go"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a>
     </div>
-    <div class="grid grid-3" data-courses>
-      <article class="card course" data-p="ciudadania" id="ciudadania"><span class="tag tag-ok" style="align-self:flex-start">Abierto · Gratuito</span><h3 class="h3">Cómo funciona un caso penal</h3><p class="small muted">Denuncia, investigación, formalización, acuerdos y juicio, en cinco videos breves.</p><div class="course-meta"><span><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg>30 minutos</span><span><svg class="ic" aria-hidden="true"><use href="#i-play"/></svg>Autoasistido</span></div><button type="button" class="btn btn-primary btn-sm" data-demo="La inscripción abre con el campus">Inscribirme</button></article>
-      <article class="card course" data-p="ciudadania"><span class="tag tag-ok" style="align-self:flex-start">Abierto · Gratuito</span><h3 class="h3">Tus derechos como víctima</h3><p class="small muted">Qué podés pedir, a quién y en qué momento del proceso.</p><div class="course-meta"><span><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg>45 minutos</span><span><svg class="ic" aria-hidden="true"><use href="#i-play"/></svg>Autoasistido</span></div><button type="button" class="btn btn-primary btn-sm" data-demo="La inscripción abre con el campus">Inscribirme</button></article>
-      <article class="card course" data-p="ciudadania"><span class="tag tag-ok" style="align-self:flex-start">Abierto · Gratuito</span><h3 class="h3">Estafas por internet: cómo prevenirlas</h3><p class="small muted">Las modalidades más frecuentes y qué hacer en las primeras horas.</p><div class="course-meta"><span><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg>40 minutos</span><span><svg class="ic" aria-hidden="true"><use href="#i-play"/></svg>Autoasistido</span></div><button type="button" class="btn btn-primary btn-sm" data-demo="La inscripción abre con el campus">Inscribirme</button></article>
-      <article class="card course" data-p="operadores" id="operadores"><span class="tag" style="align-self:flex-start">Operadores</span><h3 class="h3">Flagrancia: investigación en las primeras horas</h3><p class="small muted">Para personal fiscal y policial: actas, evidencia y audiencia de presentación.</p><div class="course-meta"><span><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg><span class="ph">[duración]</span></span><span><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg>Con tutoría</span></div><button type="button" class="btn btn-secondary btn-sm" data-demo="Inscripción con usuario institucional">Ver detalles</button></article>
-      <article class="card course" data-p="operadores"><span class="tag" style="align-self:flex-start">Operadores</span><h3 class="h3">Evidencia digital</h3><p class="small muted">Preservación, cadena de custodia y pedidos a plataformas.</p><div class="course-meta"><span><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg><span class="ph">[duración]</span></span><span><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg>Con tutoría</span></div><button type="button" class="btn btn-secondary btn-sm" data-demo="Inscripción con usuario institucional">Ver detalles</button></article>
-      <article class="card course" data-p="operadores"><span class="tag" style="align-self:flex-start">Operadores</span><h3 class="h3">Litigación en audiencias con perspectiva de género</h3><p class="small muted">Técnicas de litigación oral y estándares de debida diligencia.</p><div class="course-meta"><span><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg><span class="ph">[duración]</span></span><span><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg>Con tutoría</span></div><button type="button" class="btn btn-secondary btn-sm" data-demo="Inscripción con usuario institucional">Ver detalles</button></article>
-      <article class="card course" data-p="escuelas"><span class="tag tag-gold" style="align-self:flex-start">Escuelas y familias</span><h3 class="h3">Prevención del grooming</h3><p class="small muted">Materiales para docentes y familias, con actividades para el aula.</p><div class="course-meta"><span><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg>60 minutos</span><span><svg class="ic" aria-hidden="true"><use href="#i-download"/></svg>Con materiales</span></div><button type="button" class="btn btn-primary btn-sm" data-demo="La inscripción abre con el campus">Inscribirme</button></article>
-      <article class="card course" data-p="escuelas"><span class="tag tag-gold" style="align-self:flex-start">Escuelas y familias</span><h3 class="h3">Uso seguro de redes</h3><p class="small muted">Privacidad, perfiles falsos y cómo pedir ayuda.</p><div class="course-meta"><span><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg>45 minutos</span><span><svg class="ic" aria-hidden="true"><use href="#i-download"/></svg>Con materiales</span></div><button type="button" class="btn btn-primary btn-sm" data-demo="La inscripción abre con el campus">Inscribirme</button></article>
+  </div>
+</section>
+
+<section class="section bg-white border-y" id="oferta">
+  <div class="container">
+    <div class="section-head"><div class="section-head-text"><span class="eyebrow">Oferta por público</span><h2 class="h2">Elegí tu trayecto</h2><p>Cada público tiene una ruta de cursos pensada para lo que necesita hacer en su trabajo o en su vida cotidiana.</p></div></div>
+    <div class="profiles">
+      <div class="profile-tabs" role="tablist" aria-label="Públicos" data-pub-tabs></div>
+      <div role="tabpanel" id="pub-panel" class="stack" data-pub-panel aria-live="polite"></div>
     </div>
+  </div>
+</section>
+
+<section class="section" id="obligatoria">
+  <div class="container">
+    <div class="section-head"><div class="section-head-text"><span class="eyebrow">Para todo el personal</span><h2 class="h2">Formación obligatoria</h2><p>Los cursos que todo el personal del MPF completa, con seguimiento por área desde Mi campus.</p></div><a class="btn btn-secondary" href="campus.html">Ver mi plan de formación</a></div>
+    <div class="grid grid-3">
+      <div class="card stack-sm"><span class="ico-tile ico-tile-gold"><svg class="ic" aria-hidden="true"><use href="#i-scale"/></svg></span><h3 class="h4" style="margin-top:8px">Ley Micaela</h3><p class="small muted">Capacitación en género y violencia contra las mujeres para todas las personas que integran el MPF (Ley 27.499).</p></div>
+      <div class="card stack-sm"><span class="ico-tile"><svg class="ic" aria-hidden="true"><use href="#i-building"/></svg></span><h3 class="h4" style="margin-top:8px">Inducción institucional</h3><p class="small muted">Para quienes ingresan: organización del MPF, sistema acusatorio, atención a víctimas y ética pública.</p></div>
+      <div class="card stack-sm"><span class="ico-tile"><svg class="ic" aria-hidden="true"><use href="#i-cpu"/></svg></span><h3 class="h4" style="margin-top:8px">Uso responsable de inteligencia artificial</h3><p class="small muted">Qué herramientas se pueden usar, con qué datos y bajo qué supervisión. <span class="ph">[Obligatoriedad a decidir]</span></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-white border-y" id="como">
+  <div class="container stack-lg">
+    <div class="section-head" style="margin:0"><div class="section-head-text"><span class="eyebrow">Cómo funciona</span><h2 class="h2">De la inscripción al certificado</h2></div></div>
+    <ol class="timeline">
+      <li class="tl-item"><span class="tl-dot">1</span><h3 class="h4">Elegí un curso</h3><p>Por público, por tema o por modalidad.</p></li>
+      <li class="tl-item"><span class="tl-dot">2</span><h3 class="h4">Inscribite</h3><p>Con tu cuenta institucional o con tu correo. Los microcursos abiertos no requieren registro.</p></li>
+      <li class="tl-item"><span class="tl-dot">3</span><h3 class="h4">Cursá</h3><p>A tu ritmo o con tutoría, desde la computadora o el teléfono.</p></li>
+      <li class="tl-item"><span class="tl-dot">4</span><h3 class="h4">Aprobá</h3><p>Con actividades prácticas sobre casos reales anonimizados.</p></li>
+      <li class="tl-item"><span class="tl-dot">5</span><h3 class="h4">Descargá tu certificado</h3><p>Con código de verificación pública.</p></li>
+    </ol>
+    <h3 class="h3" style="margin-top:12px">Modalidades</h3>
+    <div class="mod-grid">
+      <div class="card card-tight"><h4 class="h4">Autoasistido</h4><p class="small muted">Contenidos, ejercicios y evaluación automática, disponibles todo el año.</p></div>
+      <div class="card card-tight"><h4 class="h4">Tutorado</h4><p class="small muted">Cohortes con fechas, foros y una tutora o un tutor que acompaña y corrige.</p></div>
+      <div class="card card-tight"><h4 class="h4">Híbrido con simulación</h4><p class="small muted">Módulos virtuales y una jornada presencial de simulación de audiencias.</p></div>
+      <div class="card card-tight"><h4 class="h4">Microcápsulas</h4><p class="small muted">Lecciones de cinco a diez minutos pensadas para el teléfono, descargables para zonas con poca conexión.</p></div>
+      <div class="card card-tight"><h4 class="h4">Conversatorios</h4><p class="small muted">Encuentros en vivo con especialistas, grabados y subtitulados.</p></div>
+      <div class="card card-tight"><h4 class="h4">Rotaciones en UFI</h4><p class="small muted">Para ingresantes: prácticas supervisadas en distintas unidades fiscales.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="casoteca">
+  <div class="container">
+    <div class="section-head"><div class="section-head-text"><span class="eyebrow">Casoteca</span><h2 class="h2">Aprender de casos resueltos</h2><p>Investigaciones reales del MPF, anonimizadas y convertidas en material de estudio, con preguntas para el análisis.</p></div><a class="link-arrow" href="prensa.html">Ver todos los casos<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+    <div class="grid grid-3">
+      <a class="news" href="prensa.html#perfil-identidad"><div class="news-img" style="aspect-ratio:16/10"><img src="assets/img/caso-perfil-identidad.jpg" alt="Pieza gráfica del MPF: De un perfil falso a una identidad real." loading="lazy"></div><div class="news-body"><h3 class="news-t">Del perfil falso a la identidad real</h3><div class="tag-list"><span class="tag">Evidencia digital</span><span class="tag">Requerimientos a plataformas</span><span class="tag">Exhortos</span></div><p class="small muted"><strong>Para analizar:</strong> ¿qué medidas había que pedir en las primeras 24 horas, a quién y con qué fundamento?</p></div></a>
+      <a class="news" href="prensa.html#flagrancia-rawson"><div class="news-img" style="aspect-ratio:16/10"><img src="assets/img/caso-flagrancia-rawson.jpg" alt="Pieza gráfica del MPF: 3 horas para investigar." loading="lazy"></div><div class="news-body"><h3 class="news-t">Tres horas para investigar</h3><div class="tag-list"><span class="tag">Flagrancia</span><span class="tag">Legajo</span><span class="tag">Acuerdos</span></div><p class="small muted"><strong>Para analizar:</strong> ¿qué prueba fue indispensable para sostener la acusación en la primera audiencia?</p></div></a>
+      <a class="news" href="prensa.html#arrebato"><div class="news-img" style="aspect-ratio:16/10"><img src="assets/img/caso-arrebato.jpg" alt="Pieza gráfica del MPF: Trabajo articulado que da resultados." loading="lazy"></div><div class="news-body"><h3 class="news-t">Robo por arrebato y trabajo articulado</h3><div class="tag-list"><span class="tag">Coordinación policial</span><span class="tag">Restitución de bienes</span><span class="tag">Unificación de penas</span></div><p class="small muted"><strong>Para analizar:</strong> ¿cómo se ordena la comunicación entre cuatro dependencias durante una persecución?</p></div></a>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-white border-y" id="biblioteca">
+  <div class="container">
+    <div class="section-head"><div class="section-head-text"><span class="eyebrow">Biblioteca y recursos</span><h2 class="h2">Materiales para el trabajo diario</h2><p>Los recursos sin información reservada se publican con licencia Creative Commons para que otras instituciones puedan reutilizarlos.</p></div></div>
+    <div class="grid grid-3">
+      <a class="card card-link" href="documentos.html?tipo=Protocolo"><span class="ico-tile"><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg></span><h3 class="h4">Protocolos de actuación</h3><p class="small muted">Versión vigente de cada protocolo, enlazada al repositorio documental.</p><span class="card-go"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a>
+      <a class="card card-link" href="#biblioteca" data-demo="Se publica con los materiales de la Escuela"><span class="ico-tile"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></span><h3 class="h4">Guías prácticas y listas de verificación</h3><p class="small muted">Para la primera intervención, el secuestro de dispositivos o la preparación de una audiencia.</p><span class="card-go"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a>
+      <a class="card card-link" href="campus.html"><span class="ico-tile"><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg></span><h3 class="h4">Modelos y formularios</h3><p class="small muted">Requerimientos, actas y oficios. Acceso con cuenta institucional.</p><span class="card-go"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a>
+      <a class="card card-link" href="#biblioteca" data-demo="Se publica con los materiales de la Escuela"><span class="ico-tile"><svg class="ic" aria-hidden="true"><use href="#i-play"/></svg></span><h3 class="h4">Videos y pódcast</h3><p class="small muted">Conversatorios grabados y cápsulas breves, con subtítulos y transcripción.</p><span class="card-go"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a>
+      <a class="card card-link" href="victimas.html#glosario"><span class="ico-tile"><svg class="ic" aria-hidden="true"><use href="#i-book"/></svg></span><h3 class="h4">Glosario en lenguaje claro</h3><p class="small muted">Los términos del proceso penal explicados con ejemplos.</p><span class="card-go"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a>
+      <a class="card card-link" href="documentos.html?tipo=Jurisprudencia"><span class="ico-tile"><svg class="ic" aria-hidden="true"><use href="#i-scale"/></svg></span><h3 class="h4">Jurisprudencia comentada</h3><p class="small muted">Decisiones relevantes con el análisis del equipo docente.</p><span class="card-go"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="calendario">
+  <div class="container">
+    <div class="section-head"><div class="section-head-text"><span class="eyebrow">Calendario</span><h2 class="h2">Inicios de cohortes, conversatorios y jornadas</h2></div><button type="button" class="btn btn-secondary" data-ics><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg>Agregar a mi calendario</button></div>
+    <ul class="cal">
+      <li><span class="cal-date"><small>Nov.</small><b>2026</b></span><div><h3 class="h4">Investigar rápido, investigar bien</h3><p class="small muted">Primera cohorte. Personal de UFI Flagrancia y comisarías. Inicio: <span class="ph">[día]</span></p></div><a class="btn btn-sm btn-ghost" href="curso-flagrancia.html">Ver curso</a></li>
+      <li><span class="cal-date"><small>Nov.</small><b>2026</b></span><div><h3 class="h4">Conversatorio: inteligencia artificial en el trabajo fiscal</h3><p class="small muted">Lineamientos en debate y experiencias de otros ministerios públicos. <span class="ph">[día]</span></p></div><span class="tag">En vivo</span></li>
+      <li><span class="cal-date"><small>Dic.</small><b>2026</b></span><div><h3 class="h4">Ley Micaela</h3><p class="small muted">Cohorte de cierre de año para quienes tienen la formación pendiente. <span class="ph">[día]</span></p></div><span class="tag tag-gold">Obligatorio</span></li>
+      <li><span class="cal-date"><small>Feb.</small><b>2027</b></span><div><h3 class="h4">Inducción institucional</h3><p class="small muted">Para el personal que ingresa. <span class="ph">[día]</span></p></div><span class="tag tag-gold">Obligatorio</span></li>
+      <li><span class="cal-date"><small>Mar.</small><b>2027</b></span><div><h3 class="h4">Prevención del grooming en las escuelas</h3><p class="small muted">Lanzamiento de materiales para el ciclo lectivo. <span class="ph">[día]</span></p></div><span class="tag tag-ok">Abierto</span></li>
+    </ul>
   </div>
 </section>
 
 <section class="section bg-white border-y">
-  <div class="container grid grid-3" style="gap:20px">
-    <div class="card stack" id="casoteca"><span class="ico-tile"><svg class="ic" aria-hidden="true"><use href="#i-book"/></svg></span><h2 class="h3">Casoteca</h2><p class="small muted">Investigaciones resueltas y anonimizadas, para estudiar cómo se construyó cada caso.</p><a class="link-arrow small" href="prensa.html">Ver casos publicados<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
-    <form class="card stack" id="certificados" data-cert novalidate>
-      <span class="ico-tile ico-tile-gold"><svg class="ic" aria-hidden="true"><use href="#i-badge"/></svg></span>
-      <h2 class="h3">Verificar un certificado</h2>
-      <div><label class="label" for="cert">Código del certificado</label><input id="cert" class="input" placeholder="Ejemplo: EMPF-2026-0001" autocomplete="off"></div>
-      <button type="submit" class="btn btn-secondary btn-sm">Verificar</button>
+  <div class="container stack-lg">
+    <div class="grid grid-3">
+      <div class="card stack-sm"><span class="ico-tile"><svg class="ic" aria-hidden="true"><use href="#i-message"/></svg></span><h2 class="h4" style="margin-top:8px">Comunidad de práctica</h2><p class="small muted">Foros por UFI y por tema para compartir modelos, resolver dudas y aprender de casos recientes, con moderación de la Escuela.</p><a class="link-arrow small" href="campus.html#comunidad">Entrar a la comunidad<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+      <div class="card stack-sm"><span class="ico-tile"><svg class="ic" aria-hidden="true"><use href="#i-news"/></svg></span><h2 class="h4" style="margin-top:8px">Investigación y publicaciones</h2><p class="small muted">Cuadernos del MPF: artículos, análisis de casos y datos para mejorar la persecución penal. Convocatoria abierta a integrantes del MPF y de universidades.</p><a class="link-arrow small" href="#biblioteca" data-demo="Las publicaciones se suman con la primera edición">Ver publicaciones<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+      <div class="card stack-sm"><span class="ico-tile ico-tile-gold"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg></span><h2 class="h4" style="margin-top:8px">Equipo docente</h2><p class="small muted">Fiscales, especialistas y docentes universitarios. Si querés proponer un curso o sumarte como tutora o tutor, conocé los requisitos.</p><a class="link-arrow small" href="contacto.html?motivo=escuela">Postularme como docente<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+    </div>
+    <div>
+      <div class="section-head" style="margin-bottom:20px"><div class="section-head-text"><span class="eyebrow">Alianzas</span><h2 class="h3">Con quiénes trabajamos</h2></div><span class="tag tag-gold">A confirmar</span></div>
+      <div class="grid grid-3">
+        <div class="ally"><strong>Universidad Nacional de San Juan</strong><span class="small muted">Diplomaturas y reconocimiento de créditos.</span></div>
+        <div class="ally"><strong>Universidad Católica de Cuyo</strong><span class="small muted">Prácticas profesionales y cursos conjuntos.</span></div>
+        <div class="ally"><strong>Poder Judicial de San Juan</strong><span class="small muted">Formación compartida en litigación y audiencias.</span></div>
+        <div class="ally"><strong>PNUD Argentina</strong><span class="small muted">Instituciones de Justicia Preparadas para el Futuro.</span></div>
+        <div class="ally"><strong>Instituto Reflejar (JUFEJUS)</strong><span class="small muted">Red federal de escuelas judiciales.</span></div>
+        <div class="ally"><strong>Consejo Federal de Política Criminal</strong><span class="small muted">Intercambio con otros ministerios públicos.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="certificados">
+  <div class="container split">
+    <div class="stack">
+      <span class="eyebrow">Certificados</span>
+      <h2 class="h2">Verificar un certificado</h2>
+      <p class="muted">Cada certificado tiene un código único. Cualquier persona o institución puede comprobar acá que es auténtico.</p>
+    </div>
+    <form class="card stack" data-cert novalidate>
+      <div><label class="label" for="cert">Código del certificado</label><input id="cert" class="input" placeholder="MPF-2026-000123" autocomplete="off"></div>
+      <div><button type="submit" class="btn btn-primary">Verificar</button></div>
       <p class="small" data-cert-out aria-live="polite"></p>
     </form>
-    <div class="card stack" id="campus" style="background:var(--ink);border-color:var(--ink);color:#C9D3DD">
-      <span class="ico-tile ico-tile-dark"><svg class="ic" aria-hidden="true"><use href="#i-cap"/></svg></span>
-      <h2 class="h3" style="color:#fff">Mi campus</h2>
-      <p class="small" style="color:#A9B8C7">Accedé a tus cursos, materiales y certificados.</p>
-      <a class="btn btn-gold btn-sm" href="#campus" data-demo="El campus virtual se integra en la siguiente etapa">Ingresar al campus</a>
+  </div>
+</section>
+
+<section class="section bg-white border-y" id="preguntas">
+  <div class="container container-narrow">
+    <div class="section-head"><div class="section-head-text"><span class="eyebrow">Ayuda</span><h2 class="h2">Preguntas frecuentes</h2></div></div>
+    <div class="faq">
+      <details open><summary>¿Quién puede inscribirse?<svg class="ic" aria-hidden="true"><use href="#i-chev-down"/></svg></summary><p>Los trayectos para personal del MPF y de fuerzas de seguridad requieren cuenta institucional. Los cursos para ciudadanía, comunidad educativa y periodismo son abiertos.</p></details>
+      <details><summary>¿Los certificados tienen validez?<svg class="ic" aria-hidden="true"><use href="#i-chev-down"/></svg></summary><p>Todos los certificados son verificables en línea. Su reconocimiento para la carrera institucional o como créditos universitarios depende de cada convenio. <span class="ph">[Definir]</span></p></details>
+      <details><summary>¿Puedo cursar desde el teléfono o con poca conexión?<svg class="ic" aria-hidden="true"><use href="#i-chev-down"/></svg></summary><p>Sí. Todos los cursos se diseñan primero para teléfono, y las microcápsulas pueden descargarse para verlas sin conexión.</p></details>
+      <details><summary>¿Los cursos son accesibles?<svg class="ic" aria-hidden="true"><use href="#i-chev-down"/></svg></summary><p>Los videos tienen subtítulos y transcripción, los textos cumplen pautas de lectura fácil y la plataforma puede usarse con lector de pantalla y con teclado.</p></details>
+      <details><summary>¿Qué plataforma se usa?<svg class="ic" aria-hidden="true"><use href="#i-chev-down"/></svg></summary><p><span class="ph">[Moodle u otra plataforma de código abierto a definir]</span>, integrada con el sitio para que la inscripción y los certificados queden en un solo lugar.</p></details>
     </div>
   </div>
 </section>

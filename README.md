@@ -13,7 +13,12 @@ Prototipo funcional del nuevo sitio del **Ministerio Público Fiscal de la Provi
 | **Servicios y trámites** | Índice lateral con seguimiento de sección, consulta de legajo (demostración), preguntas frecuentes |
 | **Víctimas** | Líneas de ayuda, derechos, guías por situación, protocolo de grooming, glosario |
 | **Fiscalías y sedes** | Mapa esquemático de los 19 departamentos, filtros, búsqueda, `?dep=` y descarga del directorio en CSV |
-| **Institución · Justicia abierta · Documentos · Prensa · Escuela · Contacto** | Secciones completas con buscadores, filtros y formularios validados |
+| **Institución** | Qué hace el MPF frente a otras instituciones, mensaje de la Fiscalía General, autoridades, organigrama, hitos de la reforma y marco normativo |
+| **Justicia abierta** | Tablero con filtros, datos abiertos, rendición de cuentas y compromisos, presupuesto, acceso a la información (con formulario), registro de IA y participación |
+| **Documentos** | Repositorio con filtros (tipo, estado, año, materia), ficha en lenguaje claro, enlace permanente (`#doc-N`), cita y exportación de metadatos |
+| **Prensa** | Caso destacado minuto a minuto, novedades por categoría, sala de prensa, pautas y boletín |
+| **Escuela · Curso · Mi campus** | Trayectos para 6 públicos, buscador de cursos, formación obligatoria, casoteca, biblioteca, calendario descargable (.ics), alianzas, verificación de certificados, ficha de curso y panel del estudiante (demostración) |
+| **Contacto · Mapa del sitio** | Canales, formulario con consentimiento, reporte de errores, accesibilidad y privacidad |
 
 **Transversal:** buscador global tipo paleta de comandos (`Ctrl/⌘ + K` o `/`), barra de ayuda urgente, tamaño de texto, alto contraste y lectura fácil (persisten entre páginas), salida rápida (botón o `Esc` tres veces en Víctimas), menú móvil, valoración de cada página, estilos de impresión y respeto por `prefers-reduced-motion`.
 

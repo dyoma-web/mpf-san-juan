@@ -1,101 +1,161 @@
 ---
 title: Justicia abierta
-description: Datos, estadísticas, datos abiertos, acceso a la información y registro público de uso de inteligencia artificial del MPF de San Juan.
+description: Datos, estadísticas, datos abiertos, rendición de cuentas, presupuesto, acceso a la información, registro de inteligencia artificial y participación ciudadana del MPF de San Juan.
 active: transparencia
+scripts: transparencia.js
 ---
 <main id="main">
 <section class="page-hero">
   <div class="container page-hero-in">
     <nav class="crumbs" aria-label="Ruta de navegación"><a href="index.html">Inicio</a><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg><span aria-current="page">Justicia abierta</span></nav>
-    <h1 class="h1">Justicia abierta</h1>
-    <p class="lead">Lo que decidimos, cómo trabajamos y con qué recursos, publicado para que cualquier persona pueda consultarlo, controlarlo y reutilizarlo.</p>
-    <div class="callout" style="max-width:760px"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg><p class="small"><strong>Datos ilustrativos.</strong> Las cifras de esta página son de ejemplo para mostrar el diseño del tablero. Se reemplazan por los datos oficiales al conectar la fuente.</p></div>
+    <h1 class="h1">Justicia abierta: <span class="serif hl">lo que hacemos, a la vista.</span></h1>
+    <p class="lead">Publicamos cómo trabajamos, qué decidimos y con qué recursos, en formatos que cualquier persona puede consultar, descargar y reutilizar.</p>
   </div>
 </section>
 
-<section class="section-sm">
+<nav class="subnav" aria-label="En esta página" data-subnav>
+  <div class="container"><ul>
+    <li><a href="#estadisticas">Datos y estadísticas</a></li>
+    <li><a href="#datasets">Datos abiertos</a></li>
+    <li><a href="#gestion">Gestión y compromisos</a></li>
+    <li><a href="#presupuesto">Presupuesto y compras</a></li>
+    <li><a href="#acceso">Acceso a la información</a></li>
+    <li><a href="#ia">Inteligencia artificial</a></li>
+    <li><a href="#participacion">Participación</a></li>
+  </ul></div>
+</nav>
+
+<section class="section" id="estadisticas">
   <div class="container stack-lg">
-    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px">
-      <div class="section-head-text"><span class="eyebrow">Tablero</span><h2 class="h2">Datos y estadísticas</h2></div>
-      <span class="tag tag-gold">Período de ejemplo · <span class="ph">[año]</span></span>
+    <div class="section-head" style="margin:0">
+      <div class="section-head-text"><span class="eyebrow">Tablero</span><h2 class="h2">Datos y estadísticas</h2><p>Cada indicador muestra de dónde sale, cuándo se actualizó y cómo descargarlo.</p></div>
+      <span class="tag tag-gold">Valores a conectar con el sistema de gestión de casos</span>
     </div>
-    <div class="kpis">
-      <div class="kpi"><span class="kpi-d">Denuncias recibidas</span><div class="kpi-n">—</div><span class="kpi-d"><span class="ph">[dato oficial]</span></span></div>
-      <div class="kpi"><span class="kpi-d">Causas resueltas</span><div class="kpi-n">—</div><span class="kpi-d"><span class="ph">[dato oficial]</span></span></div>
-      <div class="kpi"><span class="kpi-d">Tiempo medio en flagrancia</span><div class="kpi-n">—</div><span class="kpi-d"><span class="ph">[dato oficial]</span></span></div>
-      <div class="kpi"><span class="kpi-d">Víctimas acompañadas</span><div class="kpi-n">—</div><span class="kpi-d"><span class="ph">[dato oficial]</span></span></div>
+    <form class="toolbar" data-stats-filters>
+      <div><label class="label" for="f-periodo">Período</label><select id="f-periodo" class="select"><option>Último trimestre</option><option>2026</option><option>2025</option></select></div>
+      <div><label class="label" for="f-dep">Departamento</label><select id="f-dep" class="select"><option>Toda la provincia</option><option>Capital</option><option>Rawson</option><option>Caucete</option><option>Jáchal</option></select></div>
+      <div><label class="label" for="f-delito">Tipo de delito</label><select id="f-delito" class="select"><option>Todos</option><option>Contra la propiedad</option><option>Violencia de género</option><option>Contra la integridad sexual</option><option>Estafas y delitos informáticos</option></select></div>
+    </form>
+    <p class="count" data-stats-caption aria-live="polite">Mostrando: último trimestre · toda la provincia · todos los delitos</p>
+    <div class="kpis" style="grid-template-columns:repeat(3,minmax(0,1fr))">
+      <div class="kpi"><span class="kpi-d">Denuncias recibidas</span><div class="kpi-n"><span class="ph">[dato]</span></div><span class="kpi-src">Fuente: <span class="ph">[sistema]</span>. Actualizado: <span class="ph">[fecha]</span>.</span></div>
+      <div class="kpi"><span class="kpi-d">Casos resueltos</span><div class="kpi-n"><span class="ph">[dato]</span></div><span class="kpi-src">Por sentencia, acuerdo o salida alternativa.</span></div>
+      <div class="kpi"><span class="kpi-d">Tiempo medio en flagrancia</span><div class="kpi-n"><span class="ph">[dato]</span></div><span class="kpi-src">Desde la detención hasta la resolución.</span></div>
+      <div class="kpi"><span class="kpi-d">Audiencias realizadas</span><div class="kpi-n"><span class="ph">[dato]</span></div><span class="kpi-src">Con intervención de una UFI.</span></div>
+      <div class="kpi"><span class="kpi-d">Víctimas acompañadas</span><div class="kpi-n"><span class="ph">[dato]</span></div><span class="kpi-src">Por el área de atención a víctimas.</span></div>
+      <div class="kpi"><span class="kpi-d">Casos archivados</span><div class="kpi-n"><span class="ph">[dato]</span></div><span class="kpi-src">Con el motivo de archivo desagregado.</span></div>
     </div>
-    <div class="grid grid-2">
-      <div class="card">
-        <h3 class="h4">Denuncias por tipo de delito</h3>
-        <p class="xsmall muted" style="margin:4px 0 20px">Distribución ilustrativa, en porcentaje</p>
-        <div class="bars">
-          <div class="bar-row"><span>Robos y hurtos</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="bar-v">—</span></div>
-          <div class="bar-row"><span>Estafas virtuales</span><div class="bar-track"><div class="bar-fill" style="width:72%;animation-delay:.1s"></div></div><span class="bar-v">—</span></div>
-          <div class="bar-row"><span>Violencia de género</span><div class="bar-track"><div class="bar-fill" style="width:64%;animation-delay:.2s"></div></div><span class="bar-v">—</span></div>
-          <div class="bar-row"><span>Lesiones y amenazas</span><div class="bar-track"><div class="bar-fill" style="width:48%;animation-delay:.3s"></div></div><span class="bar-v">—</span></div>
-          <div class="bar-row"><span>Siniestros viales</span><div class="bar-track"><div class="bar-fill" style="width:26%;animation-delay:.4s"></div></div><span class="bar-v">—</span></div>
-        </div>
-      </div>
-      <div class="card">
-        <h3 class="h4">Cómo terminan las causas</h3>
-        <p class="xsmall muted" style="margin:4px 0 20px">Distribución ilustrativa</p>
-        <div class="bars">
-          <div class="bar-row"><span>Juicio abreviado</span><div class="bar-track"><div class="bar-fill" style="width:80%;background:var(--gold)"></div></div><span class="bar-v">—</span></div>
-          <div class="bar-row"><span>Salida alternativa</span><div class="bar-track"><div class="bar-fill" style="width:58%;background:var(--gold);animation-delay:.1s"></div></div><span class="bar-v">—</span></div>
-          <div class="bar-row"><span>Juicio oral</span><div class="bar-track"><div class="bar-fill" style="width:22%;background:var(--gold);animation-delay:.2s"></div></div><span class="bar-v">—</span></div>
-          <div class="bar-row"><span>Archivo</span><div class="bar-track"><div class="bar-fill" style="width:44%;background:var(--gold);animation-delay:.3s"></div></div><span class="bar-v">—</span></div>
-        </div>
-      </div>
-    </div>
+    <div class="chart-ph"><div><svg class="ic" aria-hidden="true" style="width:32px;height:32px;color:var(--brand-500)"><use href="#i-chart"/></svg><p style="margin-top:8px">Gráfico de evolución mensual por tipo de delito y departamento,<br>con tabla equivalente para lectores de pantalla.</p></div></div>
   </div>
 </section>
 
 <section class="section bg-white border-y" id="datasets">
   <div class="container">
-    <div class="section-head"><div class="section-head-text"><span class="eyebrow">Datos abiertos</span><h2 class="h2">Archivos para descargar y reutilizar</h2><p>En formatos abiertos, con diccionario de datos y licencia Creative Commons BY 4.0.</p></div></div>
+    <div class="section-head"><div class="section-head-text"><span class="eyebrow">Datos abiertos</span><h2 class="h2">Archivos para descargar y reutilizar</h2><p>Licencia Creative Commons Atribución 4.0. Cada conjunto incluye diccionario de datos y fecha de próxima actualización.</p></div></div>
     <div class="table-wrap">
       <table>
-        <thead><tr><th>Conjunto de datos</th><th>Formato</th><th>Actualización</th><th></th></tr></thead>
+        <thead><tr><th scope="col">Conjunto de datos</th><th scope="col">Qué contiene</th><th scope="col">Formatos</th><th scope="col">Actualización</th><th scope="col"><span class="sr-only">Descarga</span></th></tr></thead>
         <tbody>
-          <tr><td><strong>Denuncias recibidas</strong><br><span class="small muted">Por departamento, tipo de delito y mes.</span></td><td>CSV · JSON</td><td>Mensual</td><td><button type="button" class="btn btn-sm btn-ghost" data-demo="Descarga disponible al conectar la fuente oficial"><svg class="ic" aria-hidden="true"><use href="#i-download"/></svg>Descargar</button></td></tr>
-          <tr><td><strong>Causas resueltas y forma de resolución</strong><br><span class="small muted">Acuerdos, sentencias y archivos.</span></td><td>CSV</td><td>Trimestral</td><td><button type="button" class="btn btn-sm btn-ghost" data-demo="Descarga disponible al conectar la fuente oficial"><svg class="ic" aria-hidden="true"><use href="#i-download"/></svg>Descargar</button></td></tr>
-          <tr><td><strong>Directorio de sedes y UFI</strong><br><span class="small muted">Direcciones, horarios y contacto.</span></td><td>CSV</td><td>Ante cambios</td><td><a class="btn btn-sm btn-ghost" href="fiscalias.html"><svg class="ic" aria-hidden="true"><use href="#i-download"/></svg>Ir al directorio</a></td></tr>
-          <tr><td><strong>Presupuesto y ejecución</strong><br><span class="small muted">Asignación y gasto por programa.</span></td><td>CSV · XLSX</td><td>Trimestral</td><td><button type="button" class="btn btn-sm btn-ghost" data-demo="Descarga disponible al conectar la fuente oficial"><svg class="ic" aria-hidden="true"><use href="#i-download"/></svg>Descargar</button></td></tr>
+          <tr><td><strong>Directorio de dependencias</strong></td><td>Sedes, UFI, competencia, dirección, horario y accesibilidad.</td><td>CSV, JSON</td><td>Mensual</td><td><a class="btn btn-sm btn-ghost" href="fiscalias.html"><svg class="ic" aria-hidden="true"><use href="#i-download"/></svg>Descargar</a></td></tr>
+          <tr><td><strong>Denuncias por departamento</strong></td><td>Cantidad por mes, departamento y tipo de delito, sin datos personales.</td><td>CSV</td><td>Trimestral</td><td><button type="button" class="btn btn-sm btn-ghost" data-demo="Descarga disponible al conectar la fuente oficial"><svg class="ic" aria-hidden="true"><use href="#i-download"/></svg>Descargar</button></td></tr>
+          <tr><td><strong>Resoluciones e instrucciones</strong></td><td>Metadatos del repositorio documental: tipo, número, fecha, estado y materia.</td><td>CSV, JSON</td><td>Continua</td><td><button type="button" class="btn btn-sm btn-ghost" data-docs-csv><svg class="ic" aria-hidden="true"><use href="#i-download"/></svg>Descargar</button></td></tr>
+          <tr><td><strong>Presupuesto y ejecución</strong></td><td>Crédito asignado y ejecutado por partida.</td><td>CSV, XLSX</td><td>Anual</td><td><button type="button" class="btn btn-sm btn-ghost" data-demo="Descarga disponible al conectar la fuente oficial"><svg class="ic" aria-hidden="true"><use href="#i-download"/></svg>Descargar</button></td></tr>
+          <tr><td><strong>Solicitudes de información</strong></td><td>Pedidos recibidos, plazo de respuesta y resultado.</td><td>CSV</td><td>Trimestral</td><td><button type="button" class="btn btn-sm btn-ghost" data-demo="Descarga disponible al conectar la fuente oficial"><svg class="ic" aria-hidden="true"><use href="#i-download"/></svg>Descargar</button></td></tr>
         </tbody>
       </table>
     </div>
   </div>
 </section>
 
-<section class="section" id="ia">
+<section class="section" id="gestion">
   <div class="container split">
     <div class="stack">
-      <span class="eyebrow">Inteligencia artificial</span>
-      <h2 class="h2">Registro público de herramientas automatizadas</h2>
-      <p class="muted">Publicamos qué herramientas automatizadas usa el MPF, para qué, con qué datos y quién supervisa sus resultados. Ninguna decisión sobre una persona se toma solo con una herramienta automatizada.</p>
+      <span class="eyebrow">Rendición de cuentas</span>
+      <h2 class="h2">Gestión y rendición de cuentas</h2>
+      <p class="muted">Informes anuales, planes y memorias de la Fiscalía General.</p>
+      <ul class="rows" style="margin-top:8px">
+        <li><div><h3 class="h4">Informe anual de gestión 2025</h3><p>PDF accesible</p></div><a class="link-arrow small" href="documentos.html?q=informe">Ver<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+        <li><div><h3 class="h4">Plan estratégico <span class="ph">[período]</span></h3><p>Objetivos e indicadores</p></div><a class="link-arrow small" href="#gestion" data-demo="Se publica con el plan aprobado">Ver<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+        <li><div><h3 class="h4">Informes anteriores</h3><p>Desde <span class="ph">[año]</span></p></div><a class="link-arrow small" href="documentos.html?q=informe">Ver<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+      </ul>
     </div>
-    <div class="stack">
-      <div class="card"><div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap"><h3 class="h4">Clasificación de denuncias entrantes</h3><span class="tag">Asistencia</span></div><p class="small muted">Sugiere el tipo de delito y la UFI competente. Revisión humana obligatoria. <span class="ph">[Ejemplo a validar]</span></p></div>
-      <div class="card"><div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap"><h3 class="h4">Anonimización de resoluciones</h3><span class="tag">Asistencia</span></div><p class="small muted">Oculta datos personales antes de publicar documentos. Control por muestreo. <span class="ph">[Ejemplo a validar]</span></p></div>
+    <div class="card stack">
+      <h3 class="h3">Compromisos de justicia abierta</h3>
+      <p class="small muted">Lo que el MPF se compromete a publicar o mejorar, con su estado de avance.</p>
+      <ul class="rows" style="border-top:0">
+        <li><span>Publicar resoluciones e instrucciones con síntesis en lenguaje claro</span><span class="state state-prog">En curso</span></li>
+        <li><span>Publicar el directorio de dependencias como dato abierto</span><span class="state state-prog">En curso</span></li>
+        <li><span>Publicar estadísticas trimestrales de denuncias y resoluciones</span><span class="state state-pend">Pendiente</span></li>
+        <li><span>Aprobar lineamientos de uso de inteligencia artificial</span><span class="state state-pend">Pendiente</span></li>
+        <li><span>Sitio con dominio institucional y accesibilidad WCAG 2.1 AA</span><span class="state state-ok">Cumplido</span></li>
+      </ul>
     </div>
   </div>
 </section>
 
-<section class="section bg-sand" id="acceso">
-  <div class="container split" style="align-items:center">
-    <div class="stack">
-      <span class="eyebrow">Acceso a la información</span>
-      <h2 class="h2">¿Buscás información que no está publicada?</h2>
-      <p class="muted">Cualquier persona puede pedirla, sin explicar para qué. Te respondemos en los plazos que fija la ley. <span class="ph">[Norma y plazo aplicables]</span></p>
+<section class="section bg-white border-y" id="presupuesto">
+  <div class="container">
+    <div class="section-head"><div class="section-head-text"><span class="eyebrow">Recursos</span><h2 class="h2">Presupuesto, compras y declaraciones juradas</h2></div></div>
+    <div class="grid grid-3">
+      <div class="card stack-sm"><span class="ico-tile"><svg class="ic" aria-hidden="true"><use href="#i-chart"/></svg></span><h3 class="h4" style="margin-top:8px">Presupuesto</h3><p class="small muted">Crédito asignado y ejecutado por año, con la ley de presupuesto correspondiente.</p><a class="link-arrow small" href="#presupuesto" data-demo="Se publica con la ejecución oficial">Ver ejecución<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+      <div class="card stack-sm"><span class="ico-tile"><svg class="ic" aria-hidden="true"><use href="#i-file"/></svg></span><h3 class="h4" style="margin-top:8px">Compras y contrataciones</h3><p class="small muted">Llamados vigentes, adjudicaciones y proveedores. <span class="ph">[Si aplica al MPF]</span></p><a class="link-arrow small" href="#presupuesto" data-demo="Se publica con los llamados vigentes">Ver llamados<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+      <div class="card stack-sm"><span class="ico-tile"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg></span><h3 class="h4" style="margin-top:8px">Declaraciones juradas</h3><p class="small muted">De las autoridades del MPF, según la normativa provincial. <span class="ph">[Validar alcance]</span></p><a class="link-arrow small" href="institucion.html#autoridades">Ver autoridades<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
     </div>
-    <div class="card stack">
-      <ol class="steps">
-        <li><span class="num num-soft">1</span><div><strong>Completá la solicitud</strong><span class="small muted">Indicá qué información necesitás y cómo querés recibirla.</span></div></li>
-        <li><span class="num num-soft">2</span><div><strong>Recibí un número de trámite</strong><span class="small muted">Con él podés seguir el estado del pedido.</span></div></li>
-        <li><span class="num num-soft">3</span><div><strong>Obtené la respuesta</strong><span class="small muted">Por correo o en formato abierto cuando sea posible.</span></div></li>
-      </ol>
-      <a class="btn btn-primary" href="contacto.html?motivo=informacion">Hacer una solicitud<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  </div>
+</section>
+
+<section class="section" id="acceso">
+  <div class="container split">
+    <div class="stack">
+      <span class="eyebrow">Acceso a la información pública</span>
+      <h2 class="h2">Pedí la información que necesites</h2>
+      <p class="muted">Podés pedir información que tenga el MPF. No necesitás explicar para qué la querés. <span class="ph">[Validar con la ley provincial de acceso a la información]</span></p>
+      <p class="muted">Plazo de respuesta: <span class="ph">[n.º]</span> días hábiles. Las respuestas que interesan a muchas personas se publican abajo.</p>
+      <h3 class="h4" style="margin-top:10px">Solicitudes respondidas recientemente</h3>
+      <ul class="rows">
+        <li><span>Cantidad de denuncias por estafas virtuales en 2025 <span class="ph">[ejemplo]</span></span><span class="state state-ok">Respondida</span></li>
+        <li><span>Protocolo de atención a víctimas de violencia de género <span class="ph">[ejemplo]</span></span><span class="state state-ok">Respondida</span></li>
+      </ul>
+    </div>
+    <form class="card stack" data-info-form novalidate style="padding:clamp(24px,3vw,36px)">
+      <h3 class="h3">Hacer una solicitud</h3>
+      <div><label class="label" for="ai-nombre">Nombre y apellido</label><input id="ai-nombre" class="input" autocomplete="name" required><p class="field-error" hidden></p></div>
+      <div><label class="label" for="ai-mail">Correo electrónico</label><input id="ai-mail" class="input" type="email" autocomplete="email" required><p class="field-error" hidden></p></div>
+      <div><label class="label" for="ai-que">¿Qué información necesitás?</label><textarea id="ai-que" class="input" rows="4" required></textarea><p class="field-error" hidden></p></div>
+      <div><label class="label" for="ai-formato">Formato preferido</label><select id="ai-formato" class="select"><option>Archivo digital</option><option>Datos en planilla</option><option>Copia en papel</option></select></div>
+      <div><button type="submit" class="btn btn-primary">Enviar solicitud<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
+    </form>
+  </div>
+</section>
+
+<section class="section bg-white border-y" id="ia">
+  <div class="container stack-lg">
+    <div class="section-head" style="margin:0"><div class="section-head-text"><span class="eyebrow">Inteligencia artificial</span><h2 class="h2">Inteligencia artificial y herramientas automatizadas</h2><p>Registramos cada herramienta automatizada que usa el MPF: para qué sirve, qué datos usa y qué persona la supervisa. Ninguna decisión sobre un caso se toma sin intervención humana.</p></div></div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th scope="col">Herramienta</th><th scope="col">Para qué se usa</th><th scope="col">Datos que usa</th><th scope="col">Supervisión</th><th scope="col">Estado</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Buscador del repositorio documental</strong></td><td>Encontrar resoluciones y documentos por texto y filtros.</td><td>Documentos públicos</td><td>Área de comunicación</td><td><span class="state state-ok">En uso</span></td></tr>
+          <tr><td><strong>Orientador de denuncias</strong></td><td>Indicar dónde denunciar según el tipo de hecho. Árbol de decisión fijo, sin IA.</td><td>Ninguno: no registra respuestas</td><td><span class="ph">[Área responsable]</span></td><td><span class="state state-ok">En uso</span></td></tr>
+          <tr><td><span class="ph">[Herramienta a registrar]</span></td><td><span class="ph">[Finalidad]</span></td><td><span class="ph">[Datos]</span></td><td><span class="ph">[Responsable]</span></td><td><span class="state state-warn">En evaluación</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="grid grid-3">
+      <div class="card stack-sm"><span class="ico-tile"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg></span><h3 class="h4" style="margin-top:8px">Supervisión humana</h3><p class="small muted">Toda salida automatizada la revisa una persona antes de producir efectos.</p></div>
+      <div class="card stack-sm"><span class="ico-tile"><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg></span><h3 class="h4" style="margin-top:8px">Datos protegidos</h3><p class="small muted">No se ingresan datos reservados ni personales en herramientas de acceso público.</p></div>
+      <div class="card stack-sm"><span class="ico-tile ico-tile-gold"><svg class="ic" aria-hidden="true"><use href="#i-book"/></svg></span><h3 class="h4" style="margin-top:8px">Lineamientos públicos</h3><p class="small muted">Las reglas de uso se publican y se someten a consulta.</p><a class="link-arrow small" href="documentos.html?q=inteligencia">Ver borrador<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-sand" id="participacion">
+  <div class="container">
+    <div class="section-head"><div class="section-head-text"><span class="eyebrow">Participación ciudadana</span><h2 class="h2">Tu opinión cambia lo que publicamos</h2></div></div>
+    <div class="grid grid-3">
+      <div class="card stack-sm"><span class="state state-ok" style="align-self:flex-start">Abierta</span><h3 class="h4" style="margin-top:6px">Consulta: lineamientos de uso de IA</h3><p class="small muted">Leé el borrador y dejá comentarios hasta el <span class="ph">[fecha]</span>.</p><a class="btn btn-primary btn-sm" style="align-self:flex-start;margin-top:8px" href="documentos.html?q=inteligencia">Participar</a></div>
+      <div class="card stack-sm"><span class="ico-tile ico-tile-gold"><svg class="ic" aria-hidden="true"><use href="#i-sparkle"/></svg></span><h3 class="h4" style="margin-top:6px">Propuestas de mejora</h3><p class="small muted">¿Qué información debería publicar el MPF? Contanos qué necesitás.</p><a class="btn btn-secondary btn-sm" style="align-self:flex-start;margin-top:8px" href="contacto.html?motivo=informacion">Enviar una propuesta</a></div>
+      <div class="card stack-sm"><span class="ico-tile"><svg class="ic" aria-hidden="true"><use href="#i-message"/></svg></span><h3 class="h4" style="margin-top:6px">Encuesta de atención</h3><p class="small muted">Si te atendieron en una sede, contanos cómo fue. Es anónima.</p><a class="btn btn-secondary btn-sm" style="align-self:flex-start;margin-top:8px" href="contacto.html?motivo=sede">Responder</a></div>
     </div>
   </div>
 </section>

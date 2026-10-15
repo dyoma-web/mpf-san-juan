@@ -1,27 +1,35 @@
 ---
-title: Documentos
-description: Instrucciones generales, resoluciones, protocolos y dictámenes del MPF con síntesis en lenguaje claro.
+title: Documentos y jurisprudencia
+description: Instrucciones generales, resoluciones, protocolos, dictámenes, jurisprudencia e informes del MPF, con síntesis en lenguaje claro.
 active: documentos
 scripts: documentos.js
 ---
 <main id="main">
 <section class="page-hero">
   <div class="container page-hero-in">
-    <nav class="crumbs" aria-label="Ruta de navegación"><a href="index.html">Inicio</a><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg><span aria-current="page">Documentos</span></nav>
-    <h1 class="h1">Documentos y normativa</h1>
-    <p class="lead">Instrucciones generales, resoluciones, protocolos y dictámenes. Cada documento trae una síntesis que dice qué decide y a quién afecta.</p>
+    <nav class="crumbs" aria-label="Ruta de navegación"><a href="index.html">Inicio</a><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg><a href="justicia-abierta.html">Justicia abierta</a><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg><span aria-current="page">Documentos y jurisprudencia</span></nav>
+    <h1 class="h1">Documentos y jurisprudencia</h1>
+    <p class="lead">Instrucciones generales, resoluciones, protocolos, dictámenes, jurisprudencia e informes del MPF. Cada documento trae una síntesis en lenguaje claro.</p>
   </div>
 </section>
 
 <section class="section-sm">
   <div class="container stack-lg">
     <form class="toolbar" role="search" data-doc-filters>
-      <div class="grow"><label class="label" for="q-docs">Buscar</label><input id="q-docs" class="input" type="search" placeholder="Palabra clave, tema o número" autocomplete="off"></div>
-      <div><label class="label" for="f-tipo">Tipo</label><select id="f-tipo" class="select"><option value="">Todos</option><option>Instrucción general</option><option>Resolución</option><option>Protocolo</option><option>Dictamen</option></select></div>
-      <div><label class="label" for="f-vig">Vigencia</label><select id="f-vig" class="select"><option value="">Todas</option><option>Vigente</option><option>Derogada</option></select></div>
+      <div class="grow"><label class="label" for="q-docs">Buscar en títulos y síntesis</label><input id="q-docs" class="input" type="search" placeholder="Palabra clave, tema o número" autocomplete="off"></div>
+      <div><label class="label" for="f-tipo">Tipo de documento</label><select id="f-tipo" class="select"><option>Todos</option><option>Instrucción general</option><option>Resolución</option><option>Protocolo</option><option>Dictamen</option><option>Jurisprudencia</option><option>Informe</option></select></div>
+      <div><label class="label" for="f-estado">Estado</label><select id="f-estado" class="select"><option>Todos</option><option>Vigente</option><option>Modificado</option><option>Derogado</option><option>En consulta</option></select></div>
+      <div><label class="label" for="f-anio">Año</label><select id="f-anio" class="select"><option>Todos</option><option>2026</option><option>2025</option><option>2024 y anteriores</option></select></div>
+      <div><label class="label" for="f-materia">Materia</label><select id="f-materia" class="select"><option>Todas</option><option>Procedimiento penal</option><option>Niñez y adolescencia</option><option>Violencia de género</option><option>Organización interna</option><option>Tecnología</option></select></div>
     </form>
-    <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;align-items:center"><p class="count" data-doc-count></p><span class="tag tag-gold">Documentos de ejemplo</span></div>
-    <ul class="doc-list" data-doc-list></ul>
+    <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;align-items:center">
+      <p class="count" data-doc-count aria-live="polite"></p>
+      <div class="btn-row" style="align-items:center"><span class="tag tag-gold">Registros de ejemplo</span><button type="button" class="btn btn-sm btn-ghost" data-export><svg class="ic" aria-hidden="true"><use href="#i-download"/></svg>Metadatos (CSV)</button></div>
+    </div>
+    <div class="docs-layout">
+      <ul class="stack-sm" style="list-style:none;padding:0;gap:10px" data-doc-list aria-label="Resultados"></ul>
+      <article class="card doc-detail" data-doc-detail aria-live="polite" tabindex="-1"></article>
+    </div>
   </div>
 </section>
 </main>

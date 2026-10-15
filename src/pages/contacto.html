@@ -1,6 +1,6 @@
 ---
 title: Contacto
-description: Canales de atención del Ministerio Público Fiscal de San Juan y formulario de consultas.
+description: Canales de atención del Ministerio Público Fiscal de San Juan, formulario de consultas, accesibilidad y privacidad.
 active: contacto
 scripts: contacto.js
 ---
@@ -9,37 +9,78 @@ scripts: contacto.js
   <div class="container page-hero-in">
     <nav class="crumbs" aria-label="Ruta de navegación"><a href="index.html">Inicio</a><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg><span aria-current="page">Contacto</span></nav>
     <h1 class="h1">Contacto</h1>
-    <p class="lead">Elegí el canal que te quede más cómodo. Para emergencias, llamá siempre al <a href="tel:911"><strong>911</strong></a>.</p>
+    <p class="lead">Escribinos o acercate a una sede. Si es una emergencia, llamá al <a href="tel:911"><strong>911</strong></a>.</p>
   </div>
 </section>
 
-<section class="section-sm">
-  <div class="container grid grid-3">
-    <div class="card"><span class="ico-tile"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg></span><h2 class="h4" style="margin-top:14px">Por teléfono</h2><p class="small muted">Atención al público: <span class="ph">[número]</span><br>Lunes a viernes, <span class="ph">[horario]</span></p></div>
-    <div class="card"><span class="ico-tile"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg></span><h2 class="h4" style="margin-top:14px">En persona</h2><p class="small muted">Mesa de entradas: <span class="ph">[Dirección]</span>, Ciudad de San Juan</p><a class="link-arrow small" style="margin-top:10px" href="fiscalias.html">Ver todas las sedes<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
-    <div class="card"><span class="ico-tile"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg></span><h2 class="h4" style="margin-top:14px">Por correo</h2><p class="small muted"><span class="ph">[casilla institucional]</span></p></div>
+<section class="section-sm" id="canales">
+  <div class="container">
+    <div class="section-head"><div class="section-head-text"><span class="eyebrow">Atención</span><h2 class="h2">Canales de atención</h2></div></div>
+    <ul class="grid grid-4" style="list-style:none;padding:0">
+      <li class="card stack-sm"><span class="ico-tile"><svg class="ic" aria-hidden="true"><use href="#i-building"/></svg></span><h3 class="h4" style="margin-top:8px">Mesa de entradas</h3><p class="small muted"><span class="ph">[Dirección]</span>, Ciudad de San Juan<br>Lunes a viernes, <span class="ph">[horario]</span><br>Teléfono: <span class="ph">[número]</span></p><a class="link-arrow small" href="fiscalias.html">Ver todas las sedes<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+      <li class="card stack-sm"><span class="ico-tile ico-tile-gold"><svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></span><h3 class="h4" style="margin-top:8px">Atención a víctimas</h3><p class="small muted">Teléfono: <span class="ph">[número]</span><br>Correo: <span class="ph">[casilla]</span></p><a class="link-arrow small" href="victimas.html">Ver servicios<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+      <li class="card stack-sm"><span class="ico-tile"><svg class="ic" aria-hidden="true"><use href="#i-news"/></svg></span><h3 class="h4" style="margin-top:8px">Prensa</h3><p class="small muted">Correo: <span class="ph">[casilla]</span></p><a class="link-arrow small" href="prensa.html#sala">Ir a la sala de prensa<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+      <li class="card stack-sm"><span class="ico-tile"><svg class="ic" aria-hidden="true"><use href="#i-cap"/></svg></span><h3 class="h4" style="margin-top:8px">Escuela del MPF</h3><p class="small muted">Inscripciones y certificados: <span class="ph">[casilla]</span></p><a class="link-arrow small" href="escuela.html">Ver oferta formativa<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+    </ul>
   </div>
 </section>
 
-<section class="section-sm">
+<section class="section-sm" id="escribinos">
   <div class="container split">
     <form class="card stack-lg" style="padding:clamp(24px,3vw,40px)" data-contact novalidate>
-      <div class="stack-sm"><h2 class="h2">Escribinos</h2><p class="muted small">Respondemos en <span class="ph">[plazo]</span> días hábiles.</p></div>
-      <div class="callout"><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg><p class="small">Este formulario <strong>no recibe denuncias</strong>. Para denunciar, usá el <a href="orientador.html">orientador de denuncias</a>.</p></div>
+      <div class="stack-sm"><h2 class="h2">Escribinos</h2><p class="muted small">Respondemos consultas generales en <span class="ph">[n.º]</span> días hábiles.</p></div>
+      <div class="callout"><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg><p class="small"><strong>Este formulario no recibe denuncias.</strong> Para denunciar, usá el <a href="orientador.html">orientador de denuncias</a> o acercate a una sede o comisaría.</p></div>
       <div class="form-grid">
-        <div><label class="label" for="c-nombre">Nombre y apellido</label><input id="c-nombre" class="input" autocomplete="name" required><p class="field-error" hidden></p></div>
+        <div class="full"><label class="label" for="c-motivo">Tema</label><select id="c-motivo" class="select"><option value="consulta">Consulta general</option><option value="sede">Atención recibida en una sede</option><option value="sitio">Información sobre el sitio</option><option value="informacion">Acceso a la información pública</option><option value="escuela">Escuela del MPF</option><option value="prensa">Prensa</option><option value="trabajo">Trabajar en el MPF</option><option value="otro">Otro</option></select></div>
+        <div><label class="label" for="c-nombre">Nombre</label><input id="c-nombre" class="input" autocomplete="name" required><p class="field-error" hidden></p></div>
         <div><label class="label" for="c-mail">Correo electrónico</label><input id="c-mail" class="input" type="email" autocomplete="email" required><p class="field-error" hidden></p></div>
-        <div class="full"><label class="label" for="c-motivo">Motivo</label><select id="c-motivo" class="select"><option value="consulta">Consulta general</option><option value="informacion">Acceso a la información pública</option><option value="sugerencia">Sugerencia o reclamo</option><option value="prensa">Prensa</option><option value="trabajo">Trabajar en el MPF</option></select></div>
-        <div class="full"><label class="label" for="c-msg">Mensaje</label><textarea id="c-msg" class="input" rows="5" required></textarea><p class="hint">No incluyas datos sensibles de una causa.</p><p class="field-error" hidden></p></div>
+        <div class="full"><label class="label" for="c-msg">Mensaje</label><textarea id="c-msg" class="input" rows="5" required></textarea><p class="hint">No incluyas datos de una causa ni información de otras personas.</p><p class="field-error" hidden></p></div>
+        <div class="full"><label style="display:flex;gap:10px;align-items:flex-start;cursor:pointer"><input id="c-priv" type="checkbox" style="width:20px;height:20px;margin-top:3px;flex:none;accent-color:var(--brand)"><span class="small">Leí la <a href="#privacidad">política de privacidad</a> y acepto que usen mis datos solo para responder esta consulta.</span></label><p class="field-error" hidden></p></div>
       </div>
       <div><button type="submit" class="btn btn-primary btn-lg">Enviar consulta<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
     </form>
     <div class="stack-lg">
-      <div class="card stack-sm" id="trabajar"><h2 class="h3">Trabajar en el MPF</h2><p class="small muted">Concursos, búsquedas abiertas y pasantías. <span class="ph">[Enlace a convocatorias]</span></p></div>
-      <div class="card stack-sm" id="accesibilidad"><h2 class="h3">Declaración de accesibilidad</h2><p class="small muted">Este sitio busca cumplir las pautas WCAG 2.2 nivel AA: textos ampliables, alto contraste, navegación con teclado y lectura fácil. Si encontrás una barrera, contanos con este formulario.</p></div>
-      <div class="card stack-sm" id="privacidad"><h2 class="h3">Política de privacidad</h2><p class="small muted">El sitio no usa cookies de seguimiento. El orientador de denuncias no guarda las opciones que elegís. <span class="ph">[Texto legal a validar]</span></p></div>
-      <div class="card stack-sm" id="terminos"><h2 class="h3">Términos de uso</h2><p class="small muted">Los contenidos tienen licencia abierta salvo indicación en contrario. <span class="ph">[Texto legal a validar]</span></p></div>
+      <div class="card stack-sm" style="background:var(--gold-50);border-color:#EEDDB8">
+        <span class="ico-tile ico-tile-gold"><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg></span>
+        <h2 class="h3" style="margin-top:8px">¿Encontraste un error o falta información?</h2>
+        <p class="small muted">Avisanos si un dato está desactualizado, si un enlace no funciona o si algo no se entiende. Cada aviso llega al área responsable del contenido.</p>
+        <button type="button" class="btn btn-secondary btn-sm" style="align-self:flex-start;margin-top:6px" data-report>Informar un problema del sitio</button>
+      </div>
+      <div class="card stack-sm" id="trabajar">
+        <span class="ico-tile"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg></span>
+        <h2 class="h3" style="margin-top:8px">Trabajar en el MPF</h2>
+        <p class="small muted">Concursos para cargos, prácticas profesionales y pasantías con universidades. <span class="ph">[Validar organismo que convoca los concursos]</span></p>
+        <a class="link-arrow small" href="#trabajar" data-demo="Las convocatorias se publican cuando estén abiertas">Ver convocatorias abiertas<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
     </div>
+  </div>
+</section>
+
+<section class="section bg-white border-y" id="accesibilidad">
+  <div class="container">
+    <div class="section-head"><div class="section-head-text"><span class="eyebrow">Accesibilidad</span><h2 class="h2">Declaración de accesibilidad</h2><p>Este sitio busca cumplir las pautas WCAG 2.1 en su nivel AA, para que pueda usarse con lectores de pantalla, con teclado y en cualquier teléfono. Última evaluación: <span class="ph">[fecha y método]</span>.</p></div></div>
+    <div class="grid grid-3">
+      <div class="card stack-sm"><h3 class="h4">Qué podés hacer</h3><ul class="checklist small" style="margin-top:8px"><li>Agrandar el texto desde el encabezado.</li><li>Activar alto contraste.</li><li>Activar la lectura fácil en todas las páginas.</li><li>Navegar todo el sitio con teclado.</li></ul></div>
+      <div class="card stack-sm"><h3 class="h4">Limitaciones conocidas</h3><p class="small muted">Algunos documentos históricos en PDF son imágenes escaneadas sin texto. Podés pedirlos en formato accesible. <span class="ph">[Actualizar tras la evaluación]</span></p></div>
+      <div class="card stack-sm"><h3 class="h4">Reportar una barrera</h3><p class="small muted">Si algo no te funciona, escribinos a <span class="ph">[casilla]</span>. Respondemos en <span class="ph">[n.º]</span> días hábiles.</p><button type="button" class="btn btn-secondary btn-sm" style="align-self:flex-start;margin-top:6px" data-report>Reportar ahora</button></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="privacidad">
+  <div class="container split">
+    <div class="stack" id="terminos">
+      <span class="eyebrow">Privacidad y términos</span>
+      <h2 class="h2">Privacidad y términos de uso</h2>
+      <p class="muted">Tratamos los datos conforme a la Ley 25.326 de Protección de Datos Personales.</p>
+      <div class="btn-row" style="margin-top:6px"><a class="btn btn-secondary btn-sm" href="#privacidad" data-demo="El texto legal se publica tras su validación">Política completa</a><a class="btn btn-secondary btn-sm" href="#terminos" data-demo="El texto legal se publica tras su validación">Términos de uso</a></div>
+    </div>
+    <ul class="checklist card">
+      <li><div><strong>Sin rastreo publicitario.</strong> <span class="muted">La analítica del sitio es propia, no usa cookies de seguimiento y solo mide visitas, secciones y búsquedas.</span></div></li>
+      <li><div><strong>Datos mínimos.</strong> <span class="muted">Los formularios piden solo lo necesario para responder, y el orientador de denuncias no registra respuestas.</span></div></li>
+      <li><div><strong>Tus derechos.</strong> <span class="muted">Podés pedir acceso, rectificación o supresión de tus datos escribiendo a <span class="ph">[casilla]</span>.</span></div></li>
+      <li><div><strong>Código abierto.</strong> <span class="muted">El código del sitio se publica con licencia libre en un <a href="https://github.com/dyoma-web/mpf-san-juan" rel="noopener">repositorio público</a>.</span></div></li>
+    </ul>
   </div>
 </section>
 </main>

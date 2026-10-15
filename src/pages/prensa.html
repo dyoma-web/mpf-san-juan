@@ -1,56 +1,117 @@
 ---
 title: Prensa y novedades
-description: Casos contados paso a paso, comunicados y pautas para informar sin exponer a las víctimas.
+description: Casos explicados paso a paso, noticias institucionales y recursos para periodistas.
 active: prensa
+scripts: prensa.js
 ---
 <main id="main">
 <section class="page-hero">
   <div class="container page-hero-in">
-    <nav class="crumbs" aria-label="Ruta de navegación"><a href="index.html">Inicio</a><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg><span aria-current="page">Prensa</span></nav>
-    <h1 class="h1">Casos y novedades</h1>
-    <p class="lead">Cada caso se cuenta paso a paso, para que se entienda cómo trabaja la fiscalía: del hecho a la decisión.</p>
+    <nav class="crumbs" aria-label="Ruta de navegación"><a href="index.html">Inicio</a><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg><span aria-current="page">Prensa y novedades</span></nav>
+    <h1 class="h1">Prensa y novedades</h1>
+    <p class="lead">Casos explicados paso a paso, noticias institucionales y recursos para periodistas.</p>
+    <div class="hero-chips" role="group" aria-label="Filtrar por categoría" data-news-filter>
+      <button type="button" class="chip" aria-pressed="true" data-cat="">Todas</button>
+      <button type="button" class="chip" aria-pressed="false" data-cat="caso">Del hecho a la condena</button>
+      <button type="button" class="chip" aria-pressed="false" data-cat="explicamos">Explicamos</button>
+      <button type="button" class="chip" aria-pressed="false" data-cat="institucional">Institucional</button>
+      <button type="button" class="chip" aria-pressed="false" data-cat="escuela">Escuela</button>
+      <button type="button" class="chip" aria-pressed="false" data-cat="comunicados">Comunicados</button>
+    </div>
   </div>
 </section>
 
-<section class="section-sm">
-  <div class="container stack-lg">
-    <article id="grooming" class="card" style="padding:0;overflow:hidden">
-      <div class="split" style="gap:0;align-items:stretch">
-        <div class="news-img" style="min-height:320px"><img src="assets/img/caso-grooming.jpg" alt="Pieza gráfica del MPF: Un perfil falso. Un engaño. Una investigación que terminó en condena." style="height:100%"></div>
-        <div class="stack" style="padding:clamp(24px,3vw,44px)">
-          <div class="news-tags"><span class="tag">UFI ANIVI</span><span class="tag tag-gold">Del hecho a la condena</span></div>
-          <h2 class="h2">Un perfil falso en Instagram y una investigación que terminó en condena por grooming</h2>
-          <p class="news-meta"><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg>29 de septiembre de 2026</p>
-          <p class="muted">La denuncia que la familia hizo el mismo día permitió preservar la evidencia, identificar al autor en la provincia de Buenos Aires y llegar a un juicio abreviado.</p>
-          <ol class="steps">
-            <li><span class="num num-soft">1</span><div><strong>Denuncia el mismo día</strong><span class="small muted">La familia preservó las conversaciones y denunció sin demora.</span></div></li>
-            <li><span class="num num-soft">2</span><div><strong>Evidencia preservada</strong><span class="small muted">La rapidez permitió conservar la prueba digital. <span class="ph">[Detalle de las medidas]</span></span></div></li>
-            <li><span class="num num-soft">3</span><div><strong>Identificación del autor</strong><span class="small muted">La investigación lo ubicó en la provincia de Buenos Aires.</span></div></li>
-            <li><span class="num num-soft">4</span><div><strong>Juicio abreviado y condena</strong><span class="small muted">El caso se resolvió con un acuerdo homologado judicialmente.</span></div></li>
-          </ol>
-        </div>
-      </div>
-    </article>
-
-    <div class="grid grid-2">
-      <article id="flagrancia-rawson" class="news">
-        <div class="news-img" style="aspect-ratio:16/10"><img src="assets/img/caso-flagrancia-rawson.jpg" alt="Pieza gráfica del MPF: 3 horas para investigar, menos de 48 horas para llegar a una condena." loading="lazy"></div>
-        <div class="news-body">
+<section class="section-sm" data-news-item data-cat="caso" id="flagrancia-rawson">
+  <div class="container">
+    <article class="story">
+      <div class="stack-lg">
+        <div class="stack">
           <div class="news-tags"><span class="tag">UFI Flagrancia</span><span class="tag tag-gold">Del hecho a la condena</span></div>
-          <h2 class="news-t">Dos robos con arma blanca en Rawson: tres horas de investigación y condena en menos de 48 horas</h2>
-          <p class="small muted">El sistema de flagrancia permitió reunir 85 fojas de prueba en una noche y sostener la acusación en la audiencia de presentación.</p>
-          <span class="news-meta"><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg><span class="ph">[Fecha]</span></span>
+          <h2 class="h1" style="font-size:clamp(2rem,1.5rem + 2vw,3rem)">Tres horas para investigar, menos de 48 para <span class="serif" style="color:var(--brand-600)">una condena.</span></h2>
+          <p class="lead">Dos robos con arma blanca en Rawson, cinco minutos de diferencia entre uno y otro, y un sistema de flagrancia que permitió reunir la prueba en una sola noche.</p>
+          <p class="news-meta"><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg><span class="ph">[Fecha de publicación]</span> · Lectura de 4 minutos</p>
+        </div>
+        <ol class="vline">
+          <li><span class="vline-t">20:50 · Rawson</span>Durante una recorrida de prevención, la Policía recibe una alerta: un hombre exhibió un arma blanca, agredió a una mujer y le sustrajo un bolso con pertenencias y documentación.</li>
+          <li><span class="vline-t">20:55</span>En otro punto de Rawson, el mismo hombre sustrae un teléfono celular y provoca lesiones a una segunda víctima.</li>
+          <li><span class="vline-t">21:18 · 28 minutos después</span>El sospechoso es localizado en calle Zapiola. Arroja un cuchillo, intenta resistirse y daña una motocicleta policial. Es aprehendido y se secuestra el celular, que su propietario reconoce.</li>
+          <li><span class="vline-t">Unas 3 horas de trabajo</span>La fiscal a cargo imparte directivas desde el inicio. El ayudante fiscal y la Policía incorporan al legajo 85 fojas de prueba para reconstruir los hechos.</li>
+          <li class="is-key"><span class="vline-t">Menos de 48 horas</span>En la audiencia de presentación, la fiscalía sostiene la acusación y se homologa el acuerdo: <strong>8 años de prisión efectiva</strong> por robo agravado por el uso de arma blanca (dos hechos), resistencia a la autoridad y daño agravado. Se declara la reincidencia.</li>
+        </ol>
+        <p class="xsmall muted">Fuente: UFI Flagrancia. Las personas involucradas no se identifican.</p>
+      </div>
+      <aside class="story-aside">
+        <img src="assets/img/flagrancia-investigar-bien.jpg" alt="Pieza gráfica del MPF: Investigar rápido también es investigar bien." loading="lazy">
+        <div class="card stack-sm">
+          <h3 class="h4">Cómo funcionó el sistema de flagrancia</h3>
+          <ul class="checklist small" style="margin-top:6px"><li>Investigación inmediata</li><li>Producción eficiente de la prueba</li><li>Trabajo coordinado entre fiscalía y Policía</li><li>Respuesta judicial rápida</li></ul>
+        </div>
+        <div class="card stack-sm">
+          <h3 class="h4">Para entender el caso</h3>
+          <dl class="gloss">
+            <dt>Flagrancia</dt><dd>Cuando la persona es detenida en el momento del hecho o inmediatamente después.</dd>
+            <dt>Foja</dt><dd>Cada hoja del legajo de la investigación.</dd>
+            <dt>Reincidencia</dt><dd>Cuando la persona ya había cumplido una condena anterior.</dd>
+          </dl>
+          <a class="link-arrow small" style="margin-top:8px" href="escuela.html#ciu">Hacer el curso abierto sobre el proceso penal<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </aside>
+    </article>
+  </div>
+</section>
+
+<section class="section bg-white border-y">
+  <div class="container">
+    <div class="section-head"><div class="section-head-text"><span class="eyebrow">Novedades</span><h2 class="h2">Más novedades</h2></div></div>
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(min(520px,100%),1fr))" data-news-grid>
+      <article class="news news-sm" id="grooming" data-news-item data-cat="caso">
+        <div class="news-img"><img src="assets/img/caso-grooming.jpg" alt="Pieza gráfica del MPF: Un perfil falso. Un engaño." loading="lazy"></div>
+        <div class="news-body">
+          <div class="news-tags"><span class="tag">UFI ANIVI</span><span class="tag tag-gold">Del hecho a la condena</span></div>
+          <h3 class="news-t">Condena por grooming tras una investigación que cruzó fronteras</h3>
+          <p class="small muted">Requerimientos a Meta, Google y Telecom permitieron identificar al autor en Buenos Aires. Juicio abreviado: tres años de prisión de ejecución condicional.</p>
+          <span class="news-meta"><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg>29 de septiembre de 2026</span>
         </div>
       </article>
-      <article id="arrebato" class="news">
-        <div class="news-img" style="aspect-ratio:16/10"><img src="assets/img/caso-arrebato.jpg" alt="Pieza gráfica del MPF: Trabajo articulado que da resultados." loading="lazy"></div>
+      <article class="news news-sm" id="arrebato" data-news-item data-cat="caso">
+        <div class="news-img"><img src="assets/img/caso-arrebato.jpg" alt="Pieza gráfica del MPF: Trabajo articulado que da resultados." loading="lazy"></div>
         <div class="news-body">
           <div class="news-tags"><span class="tag">UFI Flagrancia</span><span class="tag tag-gold">Trabajo con la Policía</span></div>
-          <h2 class="news-t">Robo por arrebato a una mujer de 82 años: persecución, detención y condena</h2>
-          <p class="small muted">Intervinieron cuatro dependencias policiales. La víctima recuperó sus pertenencias y el caso terminó con pena unificada de prisión efectiva.</p>
+          <h3 class="news-t">Robo por arrebato a una mujer de 82 años: trabajo articulado con cuatro dependencias policiales</h3>
+          <p class="small muted">Pena unificada de tres años y tres meses de prisión efectiva. La víctima recuperó sus pertenencias.</p>
           <span class="news-meta"><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg><span class="ph">[Fecha]</span></span>
         </div>
       </article>
+      <article class="news news-sm" id="perfil-identidad" data-news-item data-cat="explicamos">
+        <div class="news-img"><img src="assets/img/caso-perfil-identidad.jpg" alt="Pieza gráfica del MPF: De un perfil falso a una identidad real." loading="lazy"></div>
+        <div class="news-body">
+          <div class="news-tags"><span class="tag">Explicamos</span><span class="tag">Evidencia digital</span></div>
+          <h3 class="news-t">De un perfil falso a una identidad real: cómo se investiga un delito digital</h3>
+          <p class="small muted">Qué información se pide a las plataformas, cuánto tarda y por qué denunciar rápido cambia el resultado.</p>
+          <span class="news-meta"><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg><span class="ph">[Fecha]</span></span>
+        </div>
+      </article>
+      <article class="news news-sm" id="rosario" data-news-item data-cat="institucional">
+        <div class="news-img"><img src="assets/img/encuentro-rosario.jpg" alt="Delegaciones de ministerios públicos frente al Monumento a la Bandera, en Rosario." loading="lazy"></div>
+        <div class="news-body">
+          <div class="news-tags"><span class="tag">Institucional</span></div>
+          <h3 class="news-t">El MPF participó en un encuentro federal de ministerios públicos en Rosario</h3>
+          <p class="small muted"><span class="ph">[Título, organizador y fecha a confirmar]</span></p>
+          <span class="news-meta"><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg><span class="ph">[Fecha]</span></span>
+        </div>
+      </article>
+    </div>
+    <p class="empty" data-news-empty hidden style="margin-top:16px">Todavía no hay publicaciones en esta categoría.</p>
+  </div>
+</section>
+
+<section class="section" id="sala">
+  <div class="container">
+    <div class="section-head"><div class="section-head-text"><span class="eyebrow">Para periodistas</span><h2 class="h2">Sala de prensa</h2><p>Contactos, voceros, material institucional y criterios para informar sobre casos.</p></div></div>
+    <div class="grid grid-3">
+      <div class="card stack-sm"><span class="ico-tile"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg></span><h3 class="h4" style="margin-top:8px">Contacto de prensa</h3><p class="small muted">Correo: <span class="ph">[casilla]</span><br>Teléfono: <span class="ph">[número]</span><br>Guardia de prensa: <span class="ph">[horario]</span></p></div>
+      <div class="card stack-sm"><span class="ico-tile"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg></span><h3 class="h4" style="margin-top:8px">Voceros por tema</h3><p class="small muted">Flagrancia, niñez, violencia de género, delitos económicos y gestión institucional. <span class="ph">[Nombres y cargos]</span></p></div>
+      <div class="card stack-sm"><span class="ico-tile ico-tile-gold"><svg class="ic" aria-hidden="true"><use href="#i-download"/></svg></span><h3 class="h4" style="margin-top:8px">Material institucional</h3><p class="small muted">Logos, manual de identidad, fotografías de autoridades y sedes.</p><button type="button" class="btn btn-secondary btn-sm" style="align-self:flex-start;margin-top:8px" data-demo="El kit se publica con el manual de identidad aprobado">Descargar kit de prensa</button></div>
     </div>
   </div>
 </section>
@@ -58,22 +119,34 @@ active: prensa
 <section class="section bg-white border-y" id="pautas">
   <div class="container split">
     <div class="stack">
-      <span class="eyebrow">Para periodistas</span>
-      <h2 class="h2">Pautas para comunicar casos sin exponer a las víctimas</h2>
-      <p class="muted">Recomendaciones para informar con precisión y cuidado.</p>
-      <div class="card stack-sm" style="margin-top:8px">
-        <h3 class="h4">Contacto de prensa</h3>
-        <p class="small muted">Correo: <span class="ph">[casilla de prensa]</span> · Teléfono: <span class="ph">[número]</span></p>
-        <p class="small muted">Voceros por tema y material gráfico disponibles a pedido.</p>
+      <span class="eyebrow">Criterios</span>
+      <h2 class="h2">Pautas para comunicar casos</h2>
+      <p class="muted">Las aplica el MPF en sus publicaciones y las recomienda a los medios.</p>
+      <div class="card stack-sm" style="margin-top:10px">
+        <h3 class="h4">Agenda de audiencias</h3>
+        <p class="small muted">Las audiencias orales son públicas. La agenda la publica la oficina de gestión de audiencias del Poder Judicial.</p>
+        <a class="link-arrow small" href="https://www.jussanjuan.gov.ar/" rel="noopener">Ver agenda en el Poder Judicial<svg class="ic" aria-hidden="true"><use href="#i-external"/></svg></a>
       </div>
     </div>
     <ul class="checklist card">
-      <li>No publiques nombres, fotos, domicilios ni escuelas de víctimas, en especial de niñas, niños y adolescentes.</li>
-      <li>Hablá de “persona investigada” o “acusada” hasta que haya sentencia firme.</li>
-      <li>En violencia de género, evitá términos como “crimen pasional” y sumá la línea 144.</li>
-      <li>Usá los datos oficiales de Justicia abierta y citá la fuente.</li>
-      <li>Ante dudas sobre una causa, consultá a la vocería antes de publicar.</li>
+      <li>No publicar nombres, imágenes ni datos que permitan identificar a las víctimas, en especial a niñas, niños y adolescentes.</li>
+      <li>Respetar la presunción de inocencia: hablar de persona imputada hasta que exista condena firme.</li>
+      <li>Nombrar la violencia de género como tal, sin justificaciones ni detalles innecesarios.</li>
+      <li>Citar la fuente oficial y la etapa procesal en la que está el caso.</li>
+      <li>Incluir las líneas de ayuda cuando la nota trate violencias o delitos sexuales.</li>
     </ul>
+  </div>
+</section>
+
+<section class="section-sm bg-night on-dark school">
+  <div class="container split" style="align-items:center">
+    <div class="stack-sm"><span class="eyebrow">Boletín</span><h2 class="h2">Recibí las novedades por correo</h2><p style="color:#A9B8C7">Casos explicados, convocatorias de la Escuela y datos nuevos de Justicia abierta. Sin publicidad.</p></div>
+    <form class="hero-search" style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.18);box-shadow:none" data-newsletter novalidate>
+      <svg class="ic" aria-hidden="true" style="color:#A9B8C7"><use href="#i-mail"/></svg>
+      <label for="nl-mail" class="sr-only">Correo electrónico</label>
+      <input id="nl-mail" type="email" placeholder="tu@correo.com" autocomplete="email" style="color:#fff">
+      <button type="submit" class="btn btn-gold">Suscribirme</button>
+    </form>
   </div>
 </section>
 </main>

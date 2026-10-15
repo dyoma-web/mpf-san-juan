@@ -1,14 +1,22 @@
-/* Contacto: validación del formulario y confirmación (sin envío real en el prototipo) */
+/* Contacto: validación del formulario, temas por URL y reporte de problemas (sin envío real en el prototipo) */
 (function () {
   'use strict';
-  const { $ } = window.MPF;
+  const { $, $$ } = window.MPF;
   const form = $('[data-contact]');
   if (!form) return;
   const motivo = new URLSearchParams(location.search).get('motivo');
   if (motivo && $(`#c-motivo option[value="${motivo}"]`)) $('#c-motivo').value = motivo;
 
+  $$('[data-report]').forEach((b) => b.addEventListener('click', () => {
+    $('#c-motivo').value = 'sitio';
+    const msg = $('#c-msg');
+    if (!msg.value) msg.value = 'Página: \nQué pasa: ';
+    $('#escribinos').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    setTimeout(() => msg.focus({ preventScroll: true }), 500);
+  }));
+
   function check(input, ok, msg) {
-    const p = input.parentElement.querySelector('.field-error');
+    const p = input.closest('div').querySelector('.field-error');
     input.setAttribute('aria-invalid', String(!ok));
     p.hidden = ok;
     p.textContent = ok ? '' : msg;
@@ -18,15 +26,16 @@
   }
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    const n = $('#c-nombre'), m = $('#c-mail'), t = $('#c-msg');
+    const n = $('#c-nombre'), m = $('#c-mail'), t = $('#c-msg'), pv = $('#c-priv');
     const r = [
       check(n, n.value.trim().length > 2, 'Escribí tu nombre.'),
       check(m, /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(m.value.trim()), 'Revisá el correo electrónico.'),
-      check(t, t.value.trim().length > 9, 'Contanos un poco más (al menos 10 caracteres).')
+      check(t, t.value.trim().length > 9, 'Contanos un poco más (al menos 10 caracteres).'),
+      check(pv, pv.checked, 'Necesitamos tu aceptación para responderte.')
     ];
-    const bad = [n, m, t][r.indexOf(false)];
+    const bad = [n, m, t, pv][r.indexOf(false)];
     if (bad) { bad.focus(); return; }
-    form.innerHTML = '<div class="success" role="status"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><div><h2 class="h3">Recibimos tu consulta</h2><p class="small muted" style="margin-top:6px">Te vamos a responder al correo que indicaste. <span class="ph">[En el prototipo no se envía ningún dato]</span></p></div></div>';
-    form.querySelector('.success').focus?.();
+    form.innerHTML = '<div class="success" role="status" tabindex="-1"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><div><h2 class="h3">Recibimos tu consulta</h2><p class="small muted" style="margin-top:6px">Te vamos a responder al correo que indicaste. <span class="ph">[En el prototipo no se envía ningún dato]</span></p></div></div>';
+    form.querySelector('.success').focus();
   });
 })();

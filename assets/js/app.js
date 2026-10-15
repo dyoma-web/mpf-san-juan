@@ -132,7 +132,20 @@
     { g: 'Justicia abierta', t: 'Datos abiertos', d: 'Archivos descargables con diccionario de datos', u: 'justicia-abierta.html#datasets', i: 'database', k: 'datos abiertos csv descargar dataset' },
     { g: 'Justicia abierta', t: 'Uso de inteligencia artificial', d: 'Registro público de herramientas automatizadas', u: 'justicia-abierta.html#ia', i: 'cpu', k: 'inteligencia artificial ia algoritmo automatizacion' },
     { g: 'Justicia abierta', t: 'Resoluciones, instrucciones y protocolos', d: 'Buscador con síntesis en lenguaje claro', u: 'documentos.html', i: 'book', k: 'resolucion instruccion protocolo dictamen jurisprudencia documento normativa' },
-    { g: 'Escuela', t: 'Escuela del MPF', d: 'Cursos para operadores, ciudadanía y escuelas', u: 'escuela.html', i: 'cap', k: 'escuela curso formacion capacitacion campus' },
+    { g: 'Institución', t: 'Autoridades y declaraciones juradas', d: 'Quiénes conducen el MPF', u: 'institucion.html#autoridades', i: 'users', k: 'autoridades fiscal general adjunto declaracion jurada trayectoria' },
+    { g: 'Institución', t: 'Organigrama', d: 'UFI, atención a víctimas, apoyo a la investigación y gestión', u: 'institucion.html#organigrama', i: 'building', k: 'organigrama estructura ufi areas' },
+    { g: 'Institución', t: 'Marco normativo', d: 'Constitución, ley orgánica, Código Procesal Penal y más', u: 'institucion.html#normativa', i: 'book', k: 'ley organica codigo procesal penal constitucion normativa micaela 27372' },
+    { g: 'Institución', t: 'Qué hace el MPF y qué hacen otras instituciones', d: 'Defensa, Poder Judicial, Policía y Defensoría', u: 'institucion.html#que-hacemos', i: 'scale', k: 'diferencia defensa poder judicial policia defensoria a quien acudir' },
+    { g: 'Justicia abierta', t: 'Compromisos y rendición de cuentas', d: 'Informes de gestión y estado de los compromisos', u: 'justicia-abierta.html#gestion', i: 'check', k: 'informe anual gestion plan estrategico compromisos rendicion' },
+    { g: 'Justicia abierta', t: 'Presupuesto y compras', d: 'Ejecución presupuestaria, contrataciones y declaraciones juradas', u: 'justicia-abierta.html#presupuesto', i: 'chart', k: 'presupuesto compras contrataciones licitacion gasto' },
+    { g: 'Justicia abierta', t: 'Participación ciudadana', d: 'Consultas públicas, propuestas y encuesta de atención', u: 'justicia-abierta.html#participacion', i: 'message', k: 'participacion consulta publica encuesta propuesta' },
+    { g: 'Institución', t: 'Sala de prensa', d: 'Contactos, voceros, kit de prensa y pautas', u: 'prensa.html#sala', i: 'news', k: 'sala de prensa voceros kit logos periodistas' },
+    { g: 'Institución', t: 'Declaración de accesibilidad', d: 'Cómo usar el sitio y reportar una barrera', u: 'contacto.html#accesibilidad', i: 'info', k: 'accesibilidad wcag lector de pantalla barrera' },
+    { g: 'Escuela', t: 'Escuela del MPF', d: 'Trayectos para personal, fuerzas de seguridad, ciudadanía, escuelas y periodismo', u: 'escuela.html', i: 'cap', k: 'escuela curso formacion capacitacion trayecto' },
+    { g: 'Escuela', t: 'Curso: procedimiento de flagrancia', d: 'Investigar rápido, investigar bien. Tutorado', u: 'curso-flagrancia.html', i: 'play', k: 'curso flagrancia investigar rapido cohorte inscripcion' },
+    { g: 'Escuela', t: 'Mi campus', d: 'Plan de formación, cursos y certificados', u: 'campus.html', i: 'cap', k: 'campus mis cursos aula virtual plan formacion' },
+    { g: 'Escuela', t: 'Calendario de la Escuela', d: 'Inicios de cohortes y conversatorios', u: 'escuela.html#calendario', i: 'calendar', k: 'calendario fechas cohorte conversatorio' },
+    { g: 'Escuela', t: 'Formación obligatoria y Ley Micaela', d: 'Cursos que completa todo el personal', u: 'escuela.html#obligatoria', i: 'scale', k: 'ley micaela obligatoria induccion genero' },
     { g: 'Escuela', t: 'Verificar un certificado', d: 'Validá un certificado emitido por la Escuela', u: 'escuela.html#certificados', i: 'badge', k: 'certificado verificar validar' }
   ];
   const cmdk = $('#cmdk');
@@ -233,6 +246,22 @@
     }));
     $('.fb-form', fb).addEventListener('submit', (e) => { e.preventDefault(); show('thanks'); });
   }
+
+  /* ---------- Subnavegación de página: marca la sección visible ---------- */
+  $$('[data-subnav]').forEach((nav) => {
+    const links = $$('a[href^="#"]', nav);
+    const secs = links.map((a) => document.getElementById(a.getAttribute('href').slice(1))).filter(Boolean);
+    if (!('IntersectionObserver' in window) || !secs.length) return;
+    const io = new IntersectionObserver((entries) => entries.forEach((en) => {
+      if (!en.isIntersecting) return;
+      links.forEach((a) => {
+        const on = a.getAttribute('href') === '#' + en.target.id;
+        a.classList.toggle('is-active', on);
+        if (on) a.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+      });
+    }), { rootMargin: '-35% 0px -60% 0px' });
+    secs.forEach((s) => io.observe(s));
+  });
 
   /* ---------- Revelado al hacer scroll ---------- */
   const rv = $$('.reveal');
